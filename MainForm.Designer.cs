@@ -396,8 +396,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = SystemColors.Window;
-            tableLayoutPanel1.BackgroundImage = Resources.Resource1.PIzza_Falling;
+            tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(button3, 0, 2);
@@ -416,34 +415,40 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.Menu;
             button1.Dock = DockStyle.Fill;
+            button1.Font = new Font("Segoe UI", 30F);
             button1.Location = new Point(3, 3);
             button1.Name = "button1";
             button1.Size = new Size(194, 218);
             button1.TabIndex = 0;
             button1.Text = "Pizza";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += this.button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.Menu;
             button2.Dock = DockStyle.Fill;
+            button2.Font = new Font("Segoe UI", 30F);
             button2.Location = new Point(3, 227);
             button2.Name = "button2";
             button2.Size = new Size(194, 218);
             button2.TabIndex = 1;
             button2.Text = "Clients";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.MenuBar;
             button3.Dock = DockStyle.Fill;
+            button3.Font = new Font("Segoe UI", 30F);
             button3.Location = new Point(3, 451);
             button3.Name = "button3";
             button3.Size = new Size(194, 219);
             button3.TabIndex = 2;
             button3.Text = "Adresses";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += this.button3_Click_2;
             // 
             // picture_Pizza_Falling

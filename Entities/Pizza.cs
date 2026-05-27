@@ -8,7 +8,7 @@
             this.nume = nume;
             this.descriere = descriere;
             this.pret = pret;
-            this.imagine = imagine;
+            this.imagePath = imagine;
         }
         public Pizza()
         {
@@ -16,12 +16,12 @@
             this.nume = "Margherita";
             this.descriere = "Pizza cu salam si masline";
             this.pret = 50;
-            this.imagine = "imagine";
+            this.imagePath = "imagine";
         }
         public int id { get; set; }
         public string nume { get; set; }
         public string descriere { get; set; }
         public decimal pret { get; set; }
-        public string imagine { get; set; }
+        public string imagePath { get; set; }
     }
 }

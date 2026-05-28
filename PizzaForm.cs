@@ -6,5 +6,43 @@
         {
             InitializeComponent();
         }
+        private string getPizzaImagePath(string pizzaName)
+        {
+            string pizza = pizzaName.Trim().ToLower();
+
+            if (pizza == "country")
+            {
+                return "Resources/country.jpg";
+            }
+            if (pizzaName == "All Cheese")
+            {
+                return "Resources/all_cheese.jpg";
+            }
+            if (pizza == "romaneasca")
+            {
+                return "Resources/romaneasca.jpg";
+            }
+            if (pizza == "cu ton")
+            {
+                return "Resources/cu_ton.jpg";
+            }
+            if (pizza == "mediteraneana")
+            {
+                return "Resources/mediteraneana.jpg";
+            }
+            if (pizza == "romaneasca")
+            {
+                return "Resources/romaneasca.jpg";
+            }
+            if (pizza == "rustica")
+            {
+                return "Resources/rustica.jpg";
+            }
+            if (pizza == "texas")
+            {
+                return "Resources/texas.jpg";
+            }
+
+        }
     }
 }

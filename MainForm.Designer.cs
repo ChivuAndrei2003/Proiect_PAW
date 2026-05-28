@@ -452,7 +452,6 @@
             // 
             picture_Pizza_Falling.BackColor = SystemColors.Control;
             picture_Pizza_Falling.Dock = DockStyle.Fill;
-            picture_Pizza_Falling.Image = Resources.Resource1.PIzza_Falling;
             picture_Pizza_Falling.Location = new Point(200, 49);
             picture_Pizza_Falling.Name = "picture_Pizza_Falling";
             picture_Pizza_Falling.Size = new Size(1179, 673);

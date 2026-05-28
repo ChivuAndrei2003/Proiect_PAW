@@ -6,7 +6,7 @@
         {
             this.id = id;
             this.nume = nume;
-            this.descriere = descriere;
+            //
             this.pret = pret;
             this.imagePath = imagine;
         }
@@ -14,13 +14,13 @@
         {
             this.id = 22;
             this.nume = "Margherita";
-            this.descriere = "Pizza cu salam si masline";
+            //this.descriere = "Pizza cu salam si masline";
             this.pret = 50;
-            this.imagePath = "imagine";
+            this.imagePath = "Resources/";
         }
         public int id { get; set; }
         public string nume { get; set; }
-        public string descriere { get; set; }
+        // public string descriere { get; set; }
         public decimal pret { get; set; }
         public string imagePath { get; set; }
     }

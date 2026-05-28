@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            lblPicture = new PictureBox();
-            lblName = new Label();
-            lblBuy = new Button();
             lblPrice = new Label();
+            lblBuy = new Button();
+            lblName = new Label();
+            lblPicture = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lblPicture).BeginInit();
             SuspendLayout();
@@ -51,26 +51,18 @@
             panel1.Size = new Size(322, 400);
             panel1.TabIndex = 0;
             // 
-            // lblPicture
+            // lblPrice
             // 
-            lblPicture.Location = new Point(30, 22);
-            lblPicture.Margin = new Padding(0);
-            lblPicture.Name = "lblPicture";
-            lblPicture.Size = new Size(262, 196);
-            lblPicture.TabIndex = 0;
-            lblPicture.TabStop = false;
-            // 
-            // lblName
-            // 
-            lblName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 20F);
-            lblName.Location = new Point(99, 238);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(118, 37);
-            lblName.TabIndex = 1;
-            lblName.Text = "lblName";
-            lblName.TextAlign = ContentAlignment.MiddleCenter;
+            lblPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Segoe UI", 20F);
+            lblPrice.Location = new Point(99, 292);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(104, 37);
+            lblPrice.TabIndex = 3;
+            lblPrice.Text = "lblPrice";
+            lblPrice.TextAlign = ContentAlignment.MiddleCenter;
+            lblPrice.Click += label1_Click;
             // 
             // lblBuy
             // 
@@ -86,18 +78,26 @@
             lblBuy.UseVisualStyleBackColor = false;
             lblBuy.Click += lblBuy_Click;
             // 
-            // lblPrice
+            // lblName
             // 
-            lblPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblPrice.AutoSize = true;
-            lblPrice.Font = new Font("Segoe UI", 20F);
-            lblPrice.Location = new Point(99, 292);
-            lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(104, 37);
-            lblPrice.TabIndex = 3;
-            lblPrice.Text = "lblPrice";
-            lblPrice.TextAlign = ContentAlignment.MiddleCenter;
-            lblPrice.Click += label1_Click;
+            lblName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 20F);
+            lblName.Location = new Point(99, 238);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(118, 37);
+            lblName.TabIndex = 1;
+            lblName.Text = "lblName";
+            lblName.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblPicture
+            // 
+            lblPicture.Location = new Point(30, 22);
+            lblPicture.Margin = new Padding(0);
+            lblPicture.Name = "lblPicture";
+            lblPicture.Size = new Size(262, 196);
+            lblPicture.TabIndex = 0;
+            lblPicture.TabStop = false;
             // 
             // PizzaCardControl
             // 

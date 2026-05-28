@@ -145,6 +145,9 @@
   <data name="Pizza Texas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>texas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pizza_default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>pizza_default.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PIzza_Falling" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Pizza_Falling.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Pizza Falling</comment>

@@ -6,5 +6,10 @@
         {
             InitializeComponent();
         }
+
+        private void ClientsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

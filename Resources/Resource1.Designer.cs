@@ -103,6 +103,16 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pizza_default {
+            get {
+                object obj = ResourceManager.GetObject("pizza_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PIzza_Falling {
             get {
                 object obj = ResourceManager.GetObject("PIzza_Falling", resourceCulture);
@@ -157,15 +167,6 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei.Resources {
             get {
                 object obj = ResourceManager.GetObject("Pizza Texas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

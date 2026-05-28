@@ -28,12 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "AdressesForm";
+            panel1 = new Panel();
+            textBox1 = new TextBox();
+            panel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.InactiveCaption;
+            panel1.Controls.Add(textBox1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 65);
+            panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.BackColor = SystemColors.InactiveCaption;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Cursor = Cursors.Cross;
+            textBox1.Font = new Font("Segoe UI", 15F);
+            textBox1.ForeColor = SystemColors.ActiveCaptionText;
+            textBox1.Location = new Point(0, 18);
+            textBox1.Margin = new Padding(0);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(831, 27);
+            textBox1.TabIndex = 0;
+            textBox1.Text = "Adrese de LIvrare";
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // AdressesForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            Name = "AdressesForm";
+            Text = "AdressesForm";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private TextBox textBox1;
     }
 }

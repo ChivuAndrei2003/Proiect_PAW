@@ -77,12 +77,10 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            picture_Pizza_Falling = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picture_Pizza_Falling).BeginInit();
             SuspendLayout();
             // 
             // errorProvider1
@@ -100,7 +98,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1379, 24);
+            menuStrip1.Size = new Size(962, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStripMain";
             // 
@@ -307,7 +305,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { newToolStripButton, openToolStripButton, saveToolStripButton, printToolStripButton, toolStripSeparator, cutToolStripButton, copyToolStripButton, pasteToolStripButton, toolStripSeparator1, helpToolStripButton });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1379, 25);
+            toolStrip1.Size = new Size(962, 25);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStripMain";
             // 
@@ -395,6 +393,8 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -406,8 +406,8 @@
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.3922729F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 34.1753349F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.Size = new Size(200, 673);
             tableLayoutPanel1.TabIndex = 3;
@@ -429,9 +429,9 @@
             button2.BackColor = SystemColors.Menu;
             button2.Dock = DockStyle.Fill;
             button2.Font = new Font("Segoe UI", 30F);
-            button2.Location = new Point(3, 227);
+            button2.Location = new Point(3, 221);
             button2.Name = "button2";
-            button2.Size = new Size(194, 218);
+            button2.Size = new Size(194, 224);
             button2.TabIndex = 1;
             button2.Text = "Clients";
             button2.UseVisualStyleBackColor = false;
@@ -443,28 +443,16 @@
             button1.Font = new Font("Segoe UI", 30F);
             button1.Location = new Point(3, 3);
             button1.Name = "button1";
-            button1.Size = new Size(194, 218);
+            button1.Size = new Size(194, 212);
             button1.TabIndex = 0;
             button1.Text = "Pizza";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // picture_Pizza_Falling
-            // 
-            picture_Pizza_Falling.BackColor = SystemColors.Control;
-            picture_Pizza_Falling.Dock = DockStyle.Fill;
-            picture_Pizza_Falling.Location = new Point(200, 49);
-            picture_Pizza_Falling.Name = "picture_Pizza_Falling";
-            picture_Pizza_Falling.Size = new Size(1179, 673);
-            picture_Pizza_Falling.SizeMode = PictureBoxSizeMode.StretchImage;
-            picture_Pizza_Falling.TabIndex = 4;
-            picture_Pizza_Falling.TabStop = false;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1379, 722);
-            Controls.Add(picture_Pizza_Falling);
+            ClientSize = new Size(962, 722);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
@@ -477,7 +465,6 @@
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)picture_Pizza_Falling).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -531,6 +518,5 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private PictureBox picture_Pizza_Falling;
     }
 }

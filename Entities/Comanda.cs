@@ -8,7 +8,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei.Entities
             this.id = id;
             this.client = client;
             this.adresaLivrare = adresaLivrare;
-            this.pizze = pizze;
+            this.pizza = pizze;
             this.dataComanda = dataComanda;
             this.total = total;
             this.status = status;
@@ -20,7 +20,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei.Entities
 
         public Adress adresaLivrare { get; set; }
 
-        public List<Pizza> pizze { get; set; } = new List<Pizza>();
+        public List<Pizza> pizza { get; set; } = new List<Pizza>();
 
         public DateTime dataComanda { get; set; }
 

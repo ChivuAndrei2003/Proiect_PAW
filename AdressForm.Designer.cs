@@ -1,6 +1,6 @@
 ﻿namespace Proiect_PAW_Chivu_Evelyn_Andrei
 {
-    partial class ClientsForm
+    partial class AdressForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,14 +35,15 @@
             button2 = new Button();
             btnAdd = new Button();
             groupBox1 = new GroupBox();
+            numericUpDown1 = new NumericUpDown();
+            comboBox1 = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(797, 65);
+            panel1.Size = new Size(752, 65);
             panel1.TabIndex = 1;
             // 
             // textBox1
@@ -67,9 +68,9 @@
             textBox1.Location = new Point(0, 18);
             textBox1.Margin = new Padding(0);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(797, 27);
+            textBox1.Size = new Size(783, 27);
             textBox1.TabIndex = 0;
-            textBox1.Text = "Clienti";
+            textBox1.Text = "Adrese de LIvrare";
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // groupBox2
@@ -79,10 +80,10 @@
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(btnAdd);
             groupBox2.FlatStyle = FlatStyle.Flat;
-            groupBox2.Location = new Point(46, 249);
+            groupBox2.Location = new Point(47, 270);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(302, 30);
-            groupBox2.TabIndex = 58;
+            groupBox2.Size = new Size(582, 30);
+            groupBox2.TabIndex = 61;
             groupBox2.TabStop = false;
             // 
             // button3
@@ -118,80 +119,84 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(numericUpDown1);
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(0, 68);
+            groupBox1.Location = new Point(1, 89);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(797, 139);
-            groupBox1.TabIndex = 56;
+            groupBox1.Size = new Size(752, 139);
+            groupBox1.TabIndex = 60;
             groupBox1.TabStop = false;
             groupBox1.Text = "New Participant";
-            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(141, 80);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 56;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "\"country\"", "\"All Cheese\"", "\"romaneasca\"", "\"cu ton\"", "\"mediteraneana\"", "\"rustica\"", "\"texas\"", "\"custom\"" });
+            comboBox1.Location = new Point(141, 37);
+            comboBox1.MaxLength = 15;
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 55;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(46, 39);
+            label1.Location = new Point(47, 39);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(81, 15);
+            label1.Size = new Size(31, 15);
             label1.TabIndex = 1;
-            label1.Text = "Nume client : ";
+            label1.Text = "Oras";
+            label1.Click += this.label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(46, 82);
+            label2.Location = new Point(47, 82);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(87, 15);
+            label2.Size = new Size(34, 15);
             label2.TabIndex = 3;
-            label2.Text = "Adresa livrare : ";
+            label2.Text = "Pret :";
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-3, 285);
+            dataGridView1.Location = new Point(1, 306);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(800, 173);
-            dataGridView1.TabIndex = 55;
+            dataGridView1.Size = new Size(1080, 173);
+            dataGridView1.TabIndex = 59;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(141, 36);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(120, 23);
-            textBox2.TabIndex = 57;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(141, 82);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(120, 23);
-            textBox3.TabIndex = 58;
-            // 
-            // ClientsForm
+            // AdressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(797, 520);
+            ClientSize = new Size(752, 497);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
-            Name = "ClientsForm";
-            Text = "ClientsForm";
+            Name = "AdressForm";
+            Text = "AdressesForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -205,10 +210,10 @@
         private Button button2;
         private Button btnAdd;
         private GroupBox groupBox1;
+        private NumericUpDown numericUpDown1;
+        private ComboBox comboBox1;
         private Label label1;
         private Label label2;
         private DataGridView dataGridView1;
-        private TextBox textBox3;
-        private TextBox textBox2;
     }
 }

@@ -113,7 +113,6 @@
             toolStrip1.Size = new Size(1379, 25);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStripMain";
-            toolStrip1.ItemClicked += this.toolStrip1_ItemClicked;
             // 
             // newToolStripButton
             // 
@@ -424,7 +423,6 @@
             button1.TabIndex = 0;
             button1.Text = "Pizza";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += this.button1_Click;
             // 
             // button2
             // 
@@ -449,7 +447,6 @@
             button3.TabIndex = 2;
             button3.Text = "Adresses";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += this.button3_Click_2;
             // 
             // picture_Pizza_Falling
             // 
@@ -462,7 +459,6 @@
             picture_Pizza_Falling.SizeMode = PictureBoxSizeMode.StretchImage;
             picture_Pizza_Falling.TabIndex = 4;
             picture_Pizza_Falling.TabStop = false;
-            picture_Pizza_Falling.Click += this.pictureBox1_Click;
             // 
             // MainForm
             // 

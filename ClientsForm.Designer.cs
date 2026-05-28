@@ -53,7 +53,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(797, 65);
+            panel1.Size = new Size(1038, 65);
             panel1.TabIndex = 1;
             // 
             // textBox1
@@ -67,7 +67,7 @@
             textBox1.Location = new Point(0, 18);
             textBox1.Margin = new Padding(0);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(797, 27);
+            textBox1.Size = new Size(1038, 27);
             textBox1.TabIndex = 0;
             textBox1.Text = "Clienti";
             textBox1.TextAlign = HorizontalAlignment.Center;
@@ -79,7 +79,7 @@
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(btnAdd);
             groupBox2.FlatStyle = FlatStyle.Flat;
-            groupBox2.Location = new Point(46, 249);
+            groupBox2.Location = new Point(46, 255);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(302, 30);
             groupBox2.TabIndex = 58;
@@ -126,7 +126,7 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(797, 139);
+            groupBox1.Size = new Size(1038, 139);
             groupBox1.TabIndex = 56;
             groupBox1.TabStop = false;
             groupBox1.Text = "New Participant";
@@ -157,9 +157,10 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-3, 285);
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 347);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(800, 173);
+            dataGridView1.Size = new Size(1038, 173);
             dataGridView1.TabIndex = 55;
             // 
             // textBox2
@@ -180,7 +181,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(797, 520);
+            ClientSize = new Size(1038, 520);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);

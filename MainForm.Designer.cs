@@ -77,10 +77,12 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // errorProvider1
@@ -98,7 +100,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(962, 24);
+            menuStrip1.Size = new Size(1011, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStripMain";
             // 
@@ -305,7 +307,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { newToolStripButton, openToolStripButton, saveToolStripButton, printToolStripButton, toolStripSeparator, cutToolStripButton, copyToolStripButton, pasteToolStripButton, toolStripSeparator1, helpToolStripButton });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(962, 25);
+            toolStrip1.Size = new Size(1011, 25);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStripMain";
             // 
@@ -448,11 +450,23 @@
             button1.Text = "Pizza";
             button1.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            pictureBox1.Image = Resources.Resource1.PIzza_Falling;
+            pictureBox1.Location = new Point(198, 48);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(813, 674);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(962, 722);
+            ClientSize = new Size(1011, 722);
+            Controls.Add(pictureBox1);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
@@ -465,6 +479,7 @@
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -518,5 +533,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private PictureBox pictureBox1;
     }
 }

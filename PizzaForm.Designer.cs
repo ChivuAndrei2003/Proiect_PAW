@@ -34,30 +34,36 @@
             dataGridView1 = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             numeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            descriereDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pretDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             imagePathDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pizzaBindingSource = new BindingSource(components);
             groupBox1 = new GroupBox();
+            button1 = new Button();
+            pbPaste = new PictureBox();
+            numericUpDown1 = new NumericUpDown();
             comboBox1 = new ComboBox();
-            btnAdd = new Button();
             label1 = new Label();
             label2 = new Label();
             label4 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            pbPaste = new PictureBox();
-            button1 = new Button();
+            btnAdd = new Button();
             listView1 = new ListView();
             groupBox2 = new GroupBox();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
+            numericUpDown2 = new NumericUpDown();
+            label3 = new Label();
+            nume = new DataGridViewTextBoxColumn();
+            cantitate = new DataGridViewTextBoxColumn();
+            pret = new DataGridViewTextBoxColumn();
+            imagePath = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPaste).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -67,7 +73,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(850, 65);
+            panel1.Size = new Size(1044, 65);
             panel1.TabIndex = 0;
             // 
             // textBox1
@@ -81,21 +87,23 @@
             textBox1.Location = new Point(260, 21);
             textBox1.Margin = new Padding(0);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(231, 27);
+            textBox1.Size = new Size(425, 27);
             textBox1.TabIndex = 0;
             textBox1.Text = "Pizza In Stock";
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, numeDataGridViewTextBoxColumn, descriereDataGridViewTextBoxColumn, pretDataGridViewTextBoxColumn, imagePathDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, numeDataGridViewTextBoxColumn, pretDataGridViewTextBoxColumn, imagePathDataGridViewTextBoxColumn, nume, cantitate, pret, imagePath });
             dataGridView1.DataSource = pizzaBindingSource;
-            dataGridView1.Location = new Point(0, 288);
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 449);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(850, 212);
+            dataGridView1.Size = new Size(1044, 231);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -111,12 +119,6 @@
             numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
             numeDataGridViewTextBoxColumn.HeaderText = "nume";
             numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            // 
-            // descriereDataGridViewTextBoxColumn
-            // 
-            descriereDataGridViewTextBoxColumn.DataPropertyName = "descriere";
-            descriereDataGridViewTextBoxColumn.HeaderText = "descriere";
-            descriereDataGridViewTextBoxColumn.Name = "descriereDataGridViewTextBoxColumn";
             // 
             // pretDataGridViewTextBoxColumn
             // 
@@ -137,6 +139,8 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(numericUpDown2);
+            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(pbPaste);
             groupBox1.Controls.Add(numericUpDown1);
@@ -148,10 +152,39 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(802, 178);
+            groupBox1.Size = new Size(1044, 178);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "New Participant";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(611, 126);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 58;
+            button1.Text = "Adauga imagine";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // pbPaste
+            // 
+            pbPaste.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pbPaste.BackColor = SystemColors.ControlDark;
+            pbPaste.BorderStyle = BorderStyle.Fixed3D;
+            pbPaste.Location = new Point(571, 37);
+            pbPaste.Margin = new Padding(4, 3, 4, 3);
+            pbPaste.Name = "pbPaste";
+            pbPaste.Size = new Size(176, 66);
+            pbPaste.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbPaste.TabIndex = 57;
+            pbPaste.TabStop = false;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(141, 80);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 56;
             // 
             // comboBox1
             // 
@@ -163,16 +196,6 @@
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 55;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // btnAdd
-            // 
-            btnAdd.Location = new Point(7, 0);
-            btnAdd.Margin = new Padding(4, 3, 4, 3);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(82, 30);
-            btnAdd.TabIndex = 52;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -205,33 +228,18 @@
             label4.TabIndex = 6;
             label4.Text = "Imagine Custom :";
             // 
-            // numericUpDown1
+            // btnAdd
             // 
-            numericUpDown1.Location = new Point(141, 80);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 56;
-            // 
-            // pbPaste
-            // 
-            pbPaste.BackColor = SystemColors.ControlDark;
-            pbPaste.BorderStyle = BorderStyle.Fixed3D;
-            pbPaste.Location = new Point(555, 40);
-            pbPaste.Margin = new Padding(4, 3, 4, 3);
-            pbPaste.Name = "pbPaste";
-            pbPaste.Size = new Size(163, 63);
-            pbPaste.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbPaste.TabIndex = 57;
-            pbPaste.TabStop = false;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(607, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 58;
-            button1.Text = "Adauga imagine";
-            button1.UseVisualStyleBackColor = true;
+            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btnAdd.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnAdd.Location = new Point(0, 0);
+            btnAdd.Margin = new Padding(4, 3, 4, 3);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(89, 62);
+            btnAdd.TabIndex = 52;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // listView1
             // 
@@ -243,43 +251,88 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = SystemColors.AppWorkspace;
+            groupBox2.BackColor = SystemColors.ActiveCaption;
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(btnAdd);
             groupBox2.FlatStyle = FlatStyle.Flat;
-            groupBox2.Location = new Point(45, 255);
+            groupBox2.Location = new Point(287, 295);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(304, 30);
+            groupBox2.Size = new Size(339, 62);
             groupBox2.TabIndex = 54;
             groupBox2.TabStop = false;
             // 
-            // button2
-            // 
-            button2.Location = new Point(109, 0);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 30);
-            button2.TabIndex = 53;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            button3.Location = new Point(206, 0);
-            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            button3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button3.Location = new Point(249, 0);
+            button3.Margin = new Padding(0, 0, 0, 0);
             button3.Name = "button3";
-            button3.Size = new Size(82, 30);
+            button3.Size = new Size(90, 62);
             button3.TabIndex = 54;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            button2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button2.Location = new Point(126, 0);
+            button2.Margin = new Padding(0, 0, 0, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 62);
+            button2.TabIndex = 53;
+            button2.Text = "Update";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(141, 124);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(120, 23);
+            numericUpDown2.TabIndex = 60;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(45, 126);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 15);
+            label3.TabIndex = 59;
+            label3.Text = "Cantitate :";
+            // 
+            // nume
+            // 
+            nume.DataPropertyName = "nume";
+            nume.HeaderText = "nume";
+            nume.Name = "nume";
+            // 
+            // cantitate
+            // 
+            cantitate.DataPropertyName = "cantitate";
+            cantitate.HeaderText = "cantitate";
+            cantitate.Name = "cantitate";
+            // 
+            // pret
+            // 
+            pret.DataPropertyName = "pret";
+            pret.HeaderText = "pret";
+            pret.Name = "pret";
+            // 
+            // imagePath
+            // 
+            imagePath.DataPropertyName = "imagePath";
+            imagePath.HeaderText = "imagePath";
+            imagePath.Name = "imagePath";
+            // 
             // PizzaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 497);
+            ClientSize = new Size(1044, 680);
             Controls.Add(groupBox2);
             Controls.Add(listView1);
             Controls.Add(groupBox1);
@@ -293,9 +346,10 @@
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPaste).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
         }
 
@@ -323,5 +377,11 @@
         private GroupBox groupBox2;
         private Button button3;
         private Button button2;
+        private NumericUpDown numericUpDown2;
+        private Label label3;
+        private DataGridViewTextBoxColumn nume;
+        private DataGridViewTextBoxColumn cantitate;
+        private DataGridViewTextBoxColumn pret;
+        private DataGridViewTextBoxColumn imagePath;
     }
 }

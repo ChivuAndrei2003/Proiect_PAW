@@ -79,7 +79,7 @@
             groupBox1.Size = new Size(517, 198);
             groupBox1.TabIndex = 60;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Adauga adresele la care livrezi comenzile";
+            groupBox1.Text = "Adauga adresele la care livrezi comenzile :";
             // 
             // comboBox1
             // 

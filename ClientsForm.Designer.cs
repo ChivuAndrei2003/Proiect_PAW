@@ -99,7 +99,7 @@
             groupBox1.Size = new Size(1024, 330);
             groupBox1.TabIndex = 56;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Adauga Clienti";
+            groupBox1.Text = "Adauga Clienti :";
             groupBox1.Enter += groupBox1_Enter;
             // 
             // textBox2

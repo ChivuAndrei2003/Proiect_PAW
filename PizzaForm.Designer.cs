@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            panel1 = new Panel();
-            textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             numeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -54,40 +52,18 @@
             btn_Add = new Button();
             btn_Delete = new Button();
             btn_Update = new Button();
-            panel1.SuspendLayout();
+            toolStrip1 = new ToolStrip();
+            toolStripButton3 = new ToolStripButton();
+            toolStripButton1 = new ToolStripButton();
+            toolStripButton2 = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.InactiveCaption;
-            panel1.Controls.Add(textBox1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1044, 65);
-            panel1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            textBox1.BackColor = SystemColors.InactiveCaption;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.Cross;
-            textBox1.Font = new Font("Segoe UI", 15F);
-            textBox1.ForeColor = SystemColors.ActiveCaptionText;
-            textBox1.Location = new Point(297, 20);
-            textBox1.Margin = new Padding(0);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(425, 27);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "Pizza In Stock";
-            textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // dataGridView1
             // 
@@ -179,7 +155,7 @@
             groupBox1.Size = new Size(1044, 276);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
-            groupBox1.Text = "New Participant";
+            groupBox1.Text = "Adauga pizza in stock :";
             // 
             // textBox_Cantitate
             // 
@@ -308,19 +284,51 @@
             btn_Update.UseVisualStyleBackColor = true;
             btn_Update.Click += btn_Update_Click;
             // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(1044, 25);
+            toolStrip1.TabIndex = 64;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton3
+            // 
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.ImageTransparentColor = Color.Magenta;
+            toolStripButton3.Name = "toolStripButton3";
+            toolStripButton3.Size = new Size(67, 22);
+            toolStripButton3.Text = "Main Page";
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(36, 22);
+            toolStripButton1.Text = "Print";
+            // 
+            // toolStripButton2
+            // 
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(80, 22);
+            toolStripButton2.Text = "Preview Print";
+            toolStripButton2.ToolTipText = "Print Preview";
+            // 
             // PizzaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1044, 680);
+            Controls.Add(toolStrip1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
-            Controls.Add(panel1);
             Name = "PizzaForm";
             Text = "PizzaForm";
             Load += PizzaForm_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
@@ -328,13 +336,13 @@
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).EndInit();
             ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).EndInit();
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private TextBox textBox1;
         private DataGridView dataGridView1;
         private BindingSource pizzaBindingSource;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -359,5 +367,9 @@
         private DataGridViewTextBoxColumn cantitate;
         private DataGridViewTextBoxColumn pret;
         private DataGridViewTextBoxColumn imagePath;
+        private ToolStrip toolStrip1;
+        private ToolStripButton toolStripButton3;
+        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripButton2;
     }
 }

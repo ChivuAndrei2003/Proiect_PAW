@@ -36,34 +36,34 @@
             numeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pretDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             imagePathDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            pizzaBindingSource = new BindingSource(components);
-            groupBox1 = new GroupBox();
-            button1 = new Button();
-            pbPaste = new PictureBox();
-            numericUpDown1 = new NumericUpDown();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
-            label4 = new Label();
-            btnAdd = new Button();
-            listView1 = new ListView();
-            groupBox2 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            numericUpDown2 = new NumericUpDown();
-            label3 = new Label();
             nume = new DataGridViewTextBoxColumn();
             cantitate = new DataGridViewTextBoxColumn();
             pret = new DataGridViewTextBoxColumn();
             imagePath = new DataGridViewTextBoxColumn();
+            pizzaBindingSource = new BindingSource(components);
+            groupBox1 = new GroupBox();
+            textBox_Cantitate = new NumericUpDown();
+            label3 = new Label();
+            button_Adauga_Imagine = new Button();
+            pb_Imagine_Custom = new PictureBox();
+            textBox_Pret = new NumericUpDown();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
+            label2 = new Label();
+            label4 = new Label();
+            btn_Add = new Button();
+            listView1 = new ListView();
+            groupBox2 = new GroupBox();
+            btn_Delete = new Button();
+            btn_Update = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbPaste).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textBox_Pret).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -132,6 +132,30 @@
             imagePathDataGridViewTextBoxColumn.HeaderText = "imagePath";
             imagePathDataGridViewTextBoxColumn.Name = "imagePathDataGridViewTextBoxColumn";
             // 
+            // nume
+            // 
+            nume.DataPropertyName = "nume";
+            nume.HeaderText = "nume";
+            nume.Name = "nume";
+            // 
+            // cantitate
+            // 
+            cantitate.DataPropertyName = "cantitate";
+            cantitate.HeaderText = "cantitate";
+            cantitate.Name = "cantitate";
+            // 
+            // pret
+            // 
+            pret.DataPropertyName = "pret";
+            pret.HeaderText = "pret";
+            pret.Name = "pret";
+            // 
+            // imagePath
+            // 
+            imagePath.DataPropertyName = "imagePath";
+            imagePath.HeaderText = "imagePath";
+            imagePath.Name = "imagePath";
+            // 
             // pizzaBindingSource
             // 
             pizzaBindingSource.DataSource = typeof(Entities.Pizza);
@@ -139,11 +163,11 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox1.Controls.Add(numericUpDown2);
+            groupBox1.Controls.Add(textBox_Cantitate);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(pbPaste);
-            groupBox1.Controls.Add(numericUpDown1);
+            groupBox1.Controls.Add(button_Adauga_Imagine);
+            groupBox1.Controls.Add(pb_Imagine_Custom);
+            groupBox1.Controls.Add(textBox_Pret);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
@@ -157,34 +181,51 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "New Participant";
             // 
-            // button1
+            // textBox_Cantitate
             // 
-            button1.Location = new Point(611, 126);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 58;
-            button1.Text = "Adauga imagine";
-            button1.UseVisualStyleBackColor = true;
+            textBox_Cantitate.Location = new Point(141, 124);
+            textBox_Cantitate.Name = "textBox_Cantitate";
+            textBox_Cantitate.Size = new Size(120, 23);
+            textBox_Cantitate.TabIndex = 60;
             // 
-            // pbPaste
+            // label3
             // 
-            pbPaste.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pbPaste.BackColor = SystemColors.ControlDark;
-            pbPaste.BorderStyle = BorderStyle.Fixed3D;
-            pbPaste.Location = new Point(571, 37);
-            pbPaste.Margin = new Padding(4, 3, 4, 3);
-            pbPaste.Name = "pbPaste";
-            pbPaste.Size = new Size(176, 66);
-            pbPaste.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbPaste.TabIndex = 57;
-            pbPaste.TabStop = false;
+            label3.AutoSize = true;
+            label3.Location = new Point(45, 126);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 15);
+            label3.TabIndex = 59;
+            label3.Text = "Cantitate :";
             // 
-            // numericUpDown1
+            // button_Adauga_Imagine
             // 
-            numericUpDown1.Location = new Point(141, 80);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 56;
+            button_Adauga_Imagine.Location = new Point(611, 126);
+            button_Adauga_Imagine.Name = "button_Adauga_Imagine";
+            button_Adauga_Imagine.Size = new Size(75, 23);
+            button_Adauga_Imagine.TabIndex = 58;
+            button_Adauga_Imagine.Text = "Adauga imagine";
+            button_Adauga_Imagine.UseVisualStyleBackColor = true;
+            // 
+            // pb_Imagine_Custom
+            // 
+            pb_Imagine_Custom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pb_Imagine_Custom.BackColor = SystemColors.ControlDark;
+            pb_Imagine_Custom.BorderStyle = BorderStyle.Fixed3D;
+            pb_Imagine_Custom.Location = new Point(571, 37);
+            pb_Imagine_Custom.Margin = new Padding(4, 3, 4, 3);
+            pb_Imagine_Custom.Name = "pb_Imagine_Custom";
+            pb_Imagine_Custom.Size = new Size(176, 66);
+            pb_Imagine_Custom.SizeMode = PictureBoxSizeMode.StretchImage;
+            pb_Imagine_Custom.TabIndex = 57;
+            pb_Imagine_Custom.TabStop = false;
+            // 
+            // textBox_Pret
+            // 
+            textBox_Pret.Location = new Point(141, 80);
+            textBox_Pret.Name = "textBox_Pret";
+            textBox_Pret.Size = new Size(120, 23);
+            textBox_Pret.TabIndex = 56;
             // 
             // comboBox1
             // 
@@ -228,18 +269,18 @@
             label4.TabIndex = 6;
             label4.Text = "Imagine Custom :";
             // 
-            // btnAdd
+            // btn_Add
             // 
-            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            btnAdd.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAdd.Location = new Point(0, 0);
-            btnAdd.Margin = new Padding(4, 3, 4, 3);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(89, 62);
-            btnAdd.TabIndex = 52;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            btn_Add.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_Add.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btn_Add.Location = new Point(0, 0);
+            btn_Add.Margin = new Padding(4, 3, 4, 3);
+            btn_Add.Name = "btn_Add";
+            btn_Add.Size = new Size(89, 62);
+            btn_Add.TabIndex = 52;
+            btn_Add.Text = "Add";
+            btn_Add.UseVisualStyleBackColor = true;
+            btn_Add.Click += btn_Add_Click;
             // 
             // listView1
             // 
@@ -251,82 +292,42 @@
             // 
             // groupBox2
             // 
-            groupBox2.BackColor = SystemColors.ActiveCaption;
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(btnAdd);
+            groupBox2.BackColor = SystemColors.ButtonFace;
+            groupBox2.Controls.Add(btn_Delete);
+            groupBox2.Controls.Add(btn_Update);
+            groupBox2.Controls.Add(btn_Add);
             groupBox2.FlatStyle = FlatStyle.Flat;
-            groupBox2.Location = new Point(287, 295);
+            groupBox2.Location = new Point(168, 326);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(339, 62);
             groupBox2.TabIndex = 54;
             groupBox2.TabStop = false;
             // 
-            // button3
+            // btn_Delete
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            button3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button3.Location = new Point(249, 0);
-            button3.Margin = new Padding(0, 0, 0, 0);
-            button3.Name = "button3";
-            button3.Size = new Size(90, 62);
-            button3.TabIndex = 54;
-            button3.Text = "Delete";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Delete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btn_Delete.Location = new Point(249, 0);
+            btn_Delete.Margin = new Padding(0);
+            btn_Delete.Name = "btn_Delete";
+            btn_Delete.Size = new Size(90, 62);
+            btn_Delete.TabIndex = 54;
+            btn_Delete.Text = "Delete";
+            btn_Delete.UseVisualStyleBackColor = true;
+            btn_Delete.Click += btn_Delete_Click;
             // 
-            // button2
+            // btn_Update
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button2.Location = new Point(126, 0);
-            button2.Margin = new Padding(0, 0, 0, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 62);
-            button2.TabIndex = 53;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Location = new Point(141, 124);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 60;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(45, 126);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 15);
-            label3.TabIndex = 59;
-            label3.Text = "Cantitate :";
-            // 
-            // nume
-            // 
-            nume.DataPropertyName = "nume";
-            nume.HeaderText = "nume";
-            nume.Name = "nume";
-            // 
-            // cantitate
-            // 
-            cantitate.DataPropertyName = "cantitate";
-            cantitate.HeaderText = "cantitate";
-            cantitate.Name = "cantitate";
-            // 
-            // pret
-            // 
-            pret.DataPropertyName = "pret";
-            pret.HeaderText = "pret";
-            pret.Name = "pret";
-            // 
-            // imagePath
-            // 
-            imagePath.DataPropertyName = "imagePath";
-            imagePath.HeaderText = "imagePath";
-            imagePath.Name = "imagePath";
+            btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btn_Update.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btn_Update.Location = new Point(126, 0);
+            btn_Update.Margin = new Padding(0);
+            btn_Update.Name = "btn_Update";
+            btn_Update.Size = new Size(82, 62);
+            btn_Update.TabIndex = 53;
+            btn_Update.Text = "Update";
+            btn_Update.UseVisualStyleBackColor = true;
+            btn_Update.Click += btn_Update_Click;
             // 
             // PizzaForm
             // 
@@ -340,16 +341,17 @@
             Controls.Add(panel1);
             Name = "PizzaForm";
             Text = "PizzaForm";
+            Load += PizzaForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbPaste).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textBox_Pret).EndInit();
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
         }
 
@@ -361,23 +363,23 @@
         private BindingSource pizzaBindingSource;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn descriereDataGridViewTextBoxColumn;
+        // private DataGridViewTextBoxColumn descriereDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn pretDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn imagePathDataGridViewTextBoxColumn;
         private GroupBox groupBox1;
-        private Button btnAdd;
+        private Button btn_Add;
         private Label label1;
         private Label label2;
         private Label label4;
         private ComboBox comboBox1;
-        private NumericUpDown numericUpDown1;
-        private Button button1;
-        internal PictureBox pbPaste;
+        private NumericUpDown textBox_Pret;
+        private Button button_Adauga_Imagine;
+        internal PictureBox pb_Imagine_Custom;
         private ListView listView1;
         private GroupBox groupBox2;
-        private Button button3;
-        private Button button2;
-        private NumericUpDown numericUpDown2;
+        private Button btn_Delete;
+        private Button btn_Update;
+        private NumericUpDown textBox_Cantitate;
         private Label label3;
         private DataGridViewTextBoxColumn nume;
         private DataGridViewTextBoxColumn cantitate;

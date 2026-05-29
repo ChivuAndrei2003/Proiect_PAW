@@ -35,11 +35,13 @@
             button2 = new Button();
             btnAdd = new Button();
             groupBox1 = new GroupBox();
+            textBox_Strada = new TextBox();
+            textbox_Nume_Oras = new TextBox();
             label1 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            textBox_Numar = new TextBox();
+            label3 = new Label();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -118,8 +120,10 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBox_Numar);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(textBox_Strada);
+            groupBox1.Controls.Add(textbox_Nume_Oras);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(1, 89);
@@ -131,6 +135,23 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "New Participant";
             // 
+            // textBox_Strada
+            // 
+            textBox_Strada.Location = new Point(128, 82);
+            textBox_Strada.Name = "textBox_Strada";
+            textBox_Strada.Size = new Size(134, 23);
+            textBox_Strada.TabIndex = 58;
+            textBox_Strada.KeyPress += textBox_Strada_KeyPress;
+            textBox_Strada.Validating += textBox_Strada_Validating;
+            // 
+            // textbox_Nume_Oras
+            // 
+            textbox_Nume_Oras.Location = new Point(128, 37);
+            textbox_Nume_Oras.Name = "textbox_Nume_Oras";
+            textbox_Nume_Oras.Size = new Size(134, 23);
+            textbox_Nume_Oras.TabIndex = 57;
+            textbox_Nume_Oras.Validating += textbox_Nume_Oras_Validating;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -140,7 +161,6 @@
             label1.Size = new Size(31, 15);
             label1.TabIndex = 1;
             label1.Text = "Oras";
-            label1.Click += this.label1_Click;
             // 
             // label2
             // 
@@ -163,19 +183,23 @@
             dataGridView1.Size = new Size(1085, 193);
             dataGridView1.TabIndex = 59;
             // 
-            // textBox2
+            // textBox_Numar
             // 
-            textBox2.Location = new Point(128, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(134, 23);
-            textBox2.TabIndex = 57;
+            textBox_Numar.Location = new Point(434, 39);
+            textBox_Numar.Name = "textBox_Numar";
+            textBox_Numar.Size = new Size(134, 23);
+            textBox_Numar.TabIndex = 60;
+            textBox_Numar.Validating += textBox_Numar_Validating;
             // 
-            // textBox3
+            // label3
             // 
-            textBox3.Location = new Point(128, 82);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(134, 23);
-            textBox3.TabIndex = 58;
+            label3.AutoSize = true;
+            label3.Location = new Point(353, 41);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 15);
+            label3.TabIndex = 59;
+            label3.Text = "Numar : ";
             // 
             // AdressForm
             // 
@@ -209,7 +233,9 @@
         private Label label1;
         private Label label2;
         private DataGridView dataGridView1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox textbox_Nume_Oras;
+        private TextBox textBox_Strada;
+        private TextBox textBox_Numar;
+        private Label label3;
     }
 }

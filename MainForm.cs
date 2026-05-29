@@ -5,8 +5,8 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         public MainForm()
         {
             InitializeComponent();
-            picture_Pizza_Falling.Image =
-       Proiect_PAW_Chivu_Evelyn_Andrei.Resources.Resource1.PIzza_Falling;
+            //  picture_Pizza_Falling.Image = 
+            //Proiect_PAW_Chivu_Evelyn_Andrei.Resources.Resource1.PIzza_Falling;
         }
     }
 }

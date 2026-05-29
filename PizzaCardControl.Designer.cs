@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            lblPrice = new Label();
             lblBuy = new Button();
             lblPicture = new PictureBox();
-            label1 = new Label();
             groupBox1 = new GroupBox();
+            label_Pret_Produs = new Label();
+            label_Numee_Produs = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lblPicture).BeginInit();
             groupBox1.SuspendLayout();
@@ -52,20 +52,6 @@
             panel1.Padding = new Padding(30, 20, 30, 20);
             panel1.Size = new Size(337, 427);
             panel1.TabIndex = 0;
-            // 
-            // lblPrice
-            // 
-            lblPrice.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblPrice.AutoSize = true;
-            lblPrice.Font = new Font("Segoe UI", 20F);
-            lblPrice.Location = new Point(94, 58);
-            lblPrice.Margin = new Padding(0, 0, 0, 0);
-            lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(75, 37);
-            lblPrice.TabIndex = 3;
-            lblPrice.Text = "price";
-            lblPrice.TextAlign = ContentAlignment.MiddleCenter;
-            lblPrice.Click += label1_Click;
             // 
             // lblBuy
             // 
@@ -92,29 +78,43 @@
             lblPicture.TabIndex = 0;
             lblPicture.TabStop = false;
             // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(94, 19);
-            label1.Margin = new Padding(0, 0, 0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(83, 37);
-            label1.TabIndex = 4;
-            label1.Text = "name";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // groupBox1
             // 
             groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox1.Controls.Add(lblPrice);
-            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label_Pret_Produs);
+            groupBox1.Controls.Add(label_Numee_Produs);
             groupBox1.Location = new Point(30, 233);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(279, 98);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
+            // 
+            // label_Pret_Produs
+            // 
+            label_Pret_Produs.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label_Pret_Produs.AutoSize = true;
+            label_Pret_Produs.Font = new Font("Segoe UI", 20F);
+            label_Pret_Produs.Location = new Point(94, 58);
+            label_Pret_Produs.Margin = new Padding(0);
+            label_Pret_Produs.Name = "label_Pret_Produs";
+            label_Pret_Produs.Size = new Size(75, 37);
+            label_Pret_Produs.TabIndex = 3;
+            label_Pret_Produs.Text = "price";
+            label_Pret_Produs.TextAlign = ContentAlignment.MiddleCenter;
+            label_Pret_Produs.Click += label1_Click;
+            // 
+            // label_Numee_Produs
+            // 
+            label_Numee_Produs.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label_Numee_Produs.AutoSize = true;
+            label_Numee_Produs.Font = new Font("Segoe UI", 20F);
+            label_Numee_Produs.Location = new Point(94, 19);
+            label_Numee_Produs.Margin = new Padding(0);
+            label_Numee_Produs.Name = "label_Numee_Produs";
+            label_Numee_Produs.Size = new Size(83, 37);
+            label_Numee_Produs.TabIndex = 4;
+            label_Numee_Produs.Text = "name";
+            label_Numee_Produs.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PizzaCardControl
             // 
@@ -135,8 +135,8 @@
         private Panel panel1;
         private PictureBox lblPicture;
         private Button lblBuy;
-        private Label lblPrice;
-        private Label label1;
+        private Label label_Pret_Produs;
+        private Label label_Numee_Produs;
         private GroupBox groupBox1;
     }
 }

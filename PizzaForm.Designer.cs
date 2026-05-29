@@ -52,8 +52,6 @@
             label2 = new Label();
             label4 = new Label();
             btn_Add = new Button();
-            listView1 = new ListView();
-            groupBox2 = new GroupBox();
             btn_Delete = new Button();
             btn_Update = new Button();
             panel1.SuspendLayout();
@@ -63,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).BeginInit();
-            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -78,13 +75,13 @@
             // 
             // textBox1
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             textBox1.BackColor = SystemColors.InactiveCaption;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Cursor = Cursors.Cross;
             textBox1.Font = new Font("Segoe UI", 15F);
             textBox1.ForeColor = SystemColors.ActiveCaptionText;
-            textBox1.Location = new Point(260, 21);
+            textBox1.Location = new Point(297, 20);
             textBox1.Margin = new Padding(0);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(425, 27);
@@ -163,7 +160,10 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(btn_Delete);
             groupBox1.Controls.Add(textBox_Cantitate);
+            groupBox1.Controls.Add(btn_Update);
+            groupBox1.Controls.Add(btn_Add);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(button_Adauga_Imagine);
             groupBox1.Controls.Add(pb_Imagine_Custom);
@@ -176,7 +176,7 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(1044, 178);
+            groupBox1.Size = new Size(1044, 276);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "New Participant";
@@ -185,7 +185,7 @@
             // 
             textBox_Cantitate.Location = new Point(141, 124);
             textBox_Cantitate.Name = "textBox_Cantitate";
-            textBox_Cantitate.Size = new Size(120, 23);
+            textBox_Cantitate.Size = new Size(179, 23);
             textBox_Cantitate.TabIndex = 60;
             // 
             // label3
@@ -200,7 +200,7 @@
             // 
             // button_Adauga_Imagine
             // 
-            button_Adauga_Imagine.Location = new Point(611, 126);
+            button_Adauga_Imagine.Location = new Point(461, 247);
             button_Adauga_Imagine.Name = "button_Adauga_Imagine";
             button_Adauga_Imagine.Size = new Size(75, 23);
             button_Adauga_Imagine.TabIndex = 58;
@@ -212,10 +212,10 @@
             pb_Imagine_Custom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pb_Imagine_Custom.BackColor = SystemColors.ControlDark;
             pb_Imagine_Custom.BorderStyle = BorderStyle.Fixed3D;
-            pb_Imagine_Custom.Location = new Point(571, 37);
+            pb_Imagine_Custom.Location = new Point(414, 77);
             pb_Imagine_Custom.Margin = new Padding(4, 3, 4, 3);
             pb_Imagine_Custom.Name = "pb_Imagine_Custom";
-            pb_Imagine_Custom.Size = new Size(176, 66);
+            pb_Imagine_Custom.Size = new Size(176, 164);
             pb_Imagine_Custom.SizeMode = PictureBoxSizeMode.StretchImage;
             pb_Imagine_Custom.TabIndex = 57;
             pb_Imagine_Custom.TabStop = false;
@@ -224,7 +224,7 @@
             // 
             textBox_Pret.Location = new Point(141, 80);
             textBox_Pret.Name = "textBox_Pret";
-            textBox_Pret.Size = new Size(120, 23);
+            textBox_Pret.Size = new Size(179, 23);
             textBox_Pret.TabIndex = 56;
             // 
             // comboBox1
@@ -234,7 +234,7 @@
             comboBox1.Location = new Point(141, 37);
             comboBox1.MaxLength = 15;
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
+            comboBox1.Size = new Size(179, 23);
             comboBox1.TabIndex = 55;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -262,7 +262,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(446, 63);
+            label4.Location = new Point(449, 39);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(101, 15);
@@ -273,44 +273,23 @@
             // 
             btn_Add.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             btn_Add.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Add.Location = new Point(0, 0);
+            btn_Add.Location = new Point(45, 197);
             btn_Add.Margin = new Padding(4, 3, 4, 3);
             btn_Add.Name = "btn_Add";
-            btn_Add.Size = new Size(89, 62);
+            btn_Add.Size = new Size(78, 44);
             btn_Add.TabIndex = 52;
             btn_Add.Text = "Add";
             btn_Add.UseVisualStyleBackColor = true;
             btn_Add.Click += btn_Add_Click;
             // 
-            // listView1
-            // 
-            listView1.Location = new Point(228, 268);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(8, 8);
-            listView1.TabIndex = 53;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = SystemColors.ButtonFace;
-            groupBox2.Controls.Add(btn_Delete);
-            groupBox2.Controls.Add(btn_Update);
-            groupBox2.Controls.Add(btn_Add);
-            groupBox2.FlatStyle = FlatStyle.Flat;
-            groupBox2.Location = new Point(168, 326);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(339, 62);
-            groupBox2.TabIndex = 54;
-            groupBox2.TabStop = false;
-            // 
             // btn_Delete
             // 
             btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btn_Delete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Delete.Location = new Point(249, 0);
+            btn_Delete.Location = new Point(242, 197);
             btn_Delete.Margin = new Padding(0);
             btn_Delete.Name = "btn_Delete";
-            btn_Delete.Size = new Size(90, 62);
+            btn_Delete.Size = new Size(78, 44);
             btn_Delete.TabIndex = 54;
             btn_Delete.Text = "Delete";
             btn_Delete.UseVisualStyleBackColor = true;
@@ -320,10 +299,10 @@
             // 
             btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             btn_Update.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Update.Location = new Point(126, 0);
+            btn_Update.Location = new Point(141, 197);
             btn_Update.Margin = new Padding(0);
             btn_Update.Name = "btn_Update";
-            btn_Update.Size = new Size(82, 62);
+            btn_Update.Size = new Size(85, 44);
             btn_Update.TabIndex = 53;
             btn_Update.Text = "Update";
             btn_Update.UseVisualStyleBackColor = true;
@@ -334,8 +313,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1044, 680);
-            Controls.Add(groupBox2);
-            Controls.Add(listView1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
@@ -351,7 +328,6 @@
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).EndInit();
             ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).EndInit();
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).EndInit();
-            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -375,8 +351,6 @@
         private NumericUpDown textBox_Pret;
         private Button button_Adauga_Imagine;
         internal PictureBox pb_Imagine_Custom;
-        private ListView listView1;
-        private GroupBox groupBox2;
         private Button btn_Delete;
         private Button btn_Update;
         private NumericUpDown textBox_Cantitate;

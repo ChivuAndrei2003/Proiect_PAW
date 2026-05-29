@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox1 = new GroupBox();
             comboBox1 = new ComboBox();
             label4 = new Label();
@@ -52,10 +53,12 @@
             statusStrip1 = new StatusStrip();
             toolStripDropDownButton1 = new ToolStripDropDownButton();
             tOCSVToolStripMenuItem = new ToolStripMenuItem();
+            errorProvider1 = new ErrorProvider(components);
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -120,6 +123,7 @@
             btnAdd.TabIndex = 52;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btn_Add_Click;
             // 
             // textBox_Numar
             // 
@@ -280,6 +284,10 @@
             tOCSVToolStripMenuItem.Size = new Size(113, 22);
             tOCSVToolStripMenuItem.Text = "TO CSV";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // AdressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -298,6 +306,7 @@
             toolStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -327,5 +336,6 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private ComboBox comboBox1;
+        private ErrorProvider errorProvider1;
     }
 }

@@ -94,7 +94,15 @@
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            string numePizza = comboBox1.Text;
+            decimal pret = textBox_Pret.Value;
+            decimal cantitate = textBox_Cantitate.Value;
 
+            //TO DO : ADAUGA LABEL DE CANTITATE IN PIZZA CARD
+            if (numePizza != null)
+            {
+                string pizzaPath = getPizzaImagePath(numePizza);
+            }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)

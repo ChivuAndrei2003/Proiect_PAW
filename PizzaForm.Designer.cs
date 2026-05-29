@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dataGridView1 = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            numeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            pretDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            imagePathDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nume = new DataGridViewTextBoxColumn();
-            cantitate = new DataGridViewTextBoxColumn();
-            pret = new DataGridViewTextBoxColumn();
-            imagePath = new DataGridViewTextBoxColumn();
             pizzaBindingSource = new BindingSource(components);
             groupBox1 = new GroupBox();
             textBox_Cantitate = new NumericUpDown();
@@ -56,7 +47,7 @@
             toolStripButton3 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
             toolStripButton2 = new ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
@@ -64,70 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, numeDataGridViewTextBoxColumn, pretDataGridViewTextBoxColumn, imagePathDataGridViewTextBoxColumn, nume, cantitate, pret, imagePath });
-            dataGridView1.DataSource = pizzaBindingSource;
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 449);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1044, 231);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            idDataGridViewTextBoxColumn.HeaderText = "id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
-            numeDataGridViewTextBoxColumn.HeaderText = "nume";
-            numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            // 
-            // pretDataGridViewTextBoxColumn
-            // 
-            pretDataGridViewTextBoxColumn.DataPropertyName = "pret";
-            pretDataGridViewTextBoxColumn.HeaderText = "pret";
-            pretDataGridViewTextBoxColumn.Name = "pretDataGridViewTextBoxColumn";
-            // 
-            // imagePathDataGridViewTextBoxColumn
-            // 
-            imagePathDataGridViewTextBoxColumn.DataPropertyName = "imagePath";
-            imagePathDataGridViewTextBoxColumn.HeaderText = "imagePath";
-            imagePathDataGridViewTextBoxColumn.Name = "imagePathDataGridViewTextBoxColumn";
-            // 
-            // nume
-            // 
-            nume.DataPropertyName = "nume";
-            nume.HeaderText = "nume";
-            nume.Name = "nume";
-            // 
-            // cantitate
-            // 
-            cantitate.DataPropertyName = "cantitate";
-            cantitate.HeaderText = "cantitate";
-            cantitate.Name = "cantitate";
-            // 
-            // pret
-            // 
-            pret.DataPropertyName = "pret";
-            pret.HeaderText = "pret";
-            pret.Name = "pret";
-            // 
-            // imagePath
-            // 
-            imagePath.DataPropertyName = "imagePath";
-            imagePath.HeaderText = "imagePath";
-            imagePath.Name = "imagePath";
             // 
             // pizzaBindingSource
             // 
@@ -152,7 +79,7 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(1044, 276);
+            groupBox1.Size = new Size(1080, 276);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Adauga pizza in stock :";
@@ -176,7 +103,7 @@
             // 
             // button_Adauga_Imagine
             // 
-            button_Adauga_Imagine.Location = new Point(461, 247);
+            button_Adauga_Imagine.Location = new Point(695, 243);
             button_Adauga_Imagine.Name = "button_Adauga_Imagine";
             button_Adauga_Imagine.Size = new Size(75, 23);
             button_Adauga_Imagine.TabIndex = 58;
@@ -188,10 +115,10 @@
             pb_Imagine_Custom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pb_Imagine_Custom.BackColor = SystemColors.ControlDark;
             pb_Imagine_Custom.BorderStyle = BorderStyle.Fixed3D;
-            pb_Imagine_Custom.Location = new Point(414, 77);
+            pb_Imagine_Custom.Location = new Point(620, 77);
             pb_Imagine_Custom.Margin = new Padding(4, 3, 4, 3);
             pb_Imagine_Custom.Name = "pb_Imagine_Custom";
-            pb_Imagine_Custom.Size = new Size(176, 164);
+            pb_Imagine_Custom.Size = new Size(212, 164);
             pb_Imagine_Custom.SizeMode = PictureBoxSizeMode.StretchImage;
             pb_Imagine_Custom.TabIndex = 57;
             pb_Imagine_Custom.TabStop = false;
@@ -238,7 +165,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(449, 39);
+            label4.Location = new Point(679, 39);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(101, 15);
@@ -262,7 +189,7 @@
             // 
             btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btn_Delete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Delete.Location = new Point(242, 197);
+            btn_Delete.Location = new Point(278, 197);
             btn_Delete.Margin = new Padding(0);
             btn_Delete.Name = "btn_Delete";
             btn_Delete.Size = new Size(78, 44);
@@ -275,7 +202,7 @@
             // 
             btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             btn_Update.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Update.Location = new Point(141, 197);
+            btn_Update.Location = new Point(159, 197);
             btn_Update.Margin = new Padding(0);
             btn_Update.Name = "btn_Update";
             btn_Update.Size = new Size(85, 44);
@@ -289,7 +216,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1044, 25);
+            toolStrip1.Size = new Size(1080, 25);
             toolStrip1.TabIndex = 64;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -318,18 +245,25 @@
             toolStripButton2.Text = "Preview Print";
             toolStripButton2.ToolTipText = "Print Preview";
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.Location = new Point(0, 343);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1080, 337);
+            flowLayoutPanel1.TabIndex = 65;
+            // 
             // PizzaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1044, 680);
+            ClientSize = new Size(1080, 680);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(toolStrip1);
             Controls.Add(groupBox1);
-            Controls.Add(dataGridView1);
             Name = "PizzaForm";
             Text = "PizzaForm";
             Load += PizzaForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -343,13 +277,7 @@
         }
 
         #endregion
-        private DataGridView dataGridView1;
         private BindingSource pizzaBindingSource;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
-        // private DataGridViewTextBoxColumn descriereDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn pretDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn imagePathDataGridViewTextBoxColumn;
         private GroupBox groupBox1;
         private Button btn_Add;
         private Label label1;
@@ -363,13 +291,10 @@
         private Button btn_Update;
         private NumericUpDown textBox_Cantitate;
         private Label label3;
-        private DataGridViewTextBoxColumn nume;
-        private DataGridViewTextBoxColumn cantitate;
-        private DataGridViewTextBoxColumn pret;
-        private DataGridViewTextBoxColumn imagePath;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton3;
         private ToolStripButton toolStripButton1;
         private ToolStripButton toolStripButton2;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

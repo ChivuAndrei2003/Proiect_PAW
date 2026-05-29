@@ -32,9 +32,9 @@
             errorProvider1 = new ErrorProvider(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
             tableLayoutPanel1 = new TableLayoutPanel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btn_Adresses = new Button();
+            btn_Clients = new Button();
+            btn_Pizza = new Button();
             pictureBox1 = new PictureBox();
             groupBox_Dashboard = new GroupBox();
             textBox_Titlu = new TextBox();
@@ -60,9 +60,9 @@
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(button3, 0, 2);
-            tableLayoutPanel1.Controls.Add(button2, 0, 1);
-            tableLayoutPanel1.Controls.Add(button1, 0, 0);
+            tableLayoutPanel1.Controls.Add(btn_Adresses, 0, 2);
+            tableLayoutPanel1.Controls.Add(btn_Clients, 0, 1);
+            tableLayoutPanel1.Controls.Add(btn_Pizza, 0, 0);
             tableLayoutPanel1.Location = new Point(0, 49);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -70,44 +70,47 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.3922729F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 34.1753349F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(200, 665);
+            tableLayoutPanel1.Size = new Size(200, 674);
             tableLayoutPanel1.TabIndex = 3;
             // 
-            // button3
+            // btn_Adresses
             // 
-            button3.BackColor = SystemColors.MenuBar;
-            button3.Dock = DockStyle.Fill;
-            button3.Font = new Font("Segoe UI", 30F);
-            button3.Location = new Point(3, 445);
-            button3.Name = "button3";
-            button3.Size = new Size(194, 217);
-            button3.TabIndex = 2;
-            button3.Text = "Adresses";
-            button3.UseVisualStyleBackColor = false;
+            btn_Adresses.BackColor = SystemColors.MenuBar;
+            btn_Adresses.Dock = DockStyle.Fill;
+            btn_Adresses.Font = new Font("Segoe UI", 30F);
+            btn_Adresses.Location = new Point(3, 451);
+            btn_Adresses.Name = "btn_Adresses";
+            btn_Adresses.Size = new Size(194, 220);
+            btn_Adresses.TabIndex = 2;
+            btn_Adresses.Text = "Adresses";
+            btn_Adresses.UseVisualStyleBackColor = false;
+            btn_Adresses.Click += btn_Adresses_Click;
             // 
-            // button2
+            // btn_Clients
             // 
-            button2.BackColor = SystemColors.Menu;
-            button2.Dock = DockStyle.Left;
-            button2.Font = new Font("Segoe UI", 30F);
-            button2.Location = new Point(3, 218);
-            button2.Name = "button2";
-            button2.Size = new Size(194, 221);
-            button2.TabIndex = 1;
-            button2.Text = "Clients";
-            button2.UseVisualStyleBackColor = false;
+            btn_Clients.BackColor = SystemColors.Menu;
+            btn_Clients.Dock = DockStyle.Left;
+            btn_Clients.Font = new Font("Segoe UI", 30F);
+            btn_Clients.Location = new Point(3, 221);
+            btn_Clients.Name = "btn_Clients";
+            btn_Clients.Size = new Size(194, 224);
+            btn_Clients.TabIndex = 1;
+            btn_Clients.Text = "Clients";
+            btn_Clients.UseVisualStyleBackColor = false;
+            btn_Clients.Click += btn_Clients_Click;
             // 
-            // button1
+            // btn_Pizza
             // 
-            button1.BackColor = SystemColors.Menu;
-            button1.Dock = DockStyle.Fill;
-            button1.Font = new Font("Segoe UI", 30F);
-            button1.Location = new Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(194, 209);
-            button1.TabIndex = 0;
-            button1.Text = "Pizza";
-            button1.UseVisualStyleBackColor = false;
+            btn_Pizza.BackColor = SystemColors.Menu;
+            btn_Pizza.Dock = DockStyle.Fill;
+            btn_Pizza.Font = new Font("Segoe UI", 30F);
+            btn_Pizza.Location = new Point(3, 3);
+            btn_Pizza.Name = "btn_Pizza";
+            btn_Pizza.Size = new Size(194, 212);
+            btn_Pizza.TabIndex = 0;
+            btn_Pizza.Text = "Pizza";
+            btn_Pizza.UseVisualStyleBackColor = false;
+            btn_Pizza.Click += btn_Pizza_Click;
             // 
             // pictureBox1
             // 
@@ -158,6 +161,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "MainForm";
             Text = "Form1";
+            Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -172,9 +176,9 @@
         private ErrorProvider errorProvider1;
         private ContextMenuStrip contextMenuStrip1;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btn_Pizza;
+        private Button btn_Clients;
+        private Button btn_Adresses;
         private PictureBox pictureBox1;
         private GroupBox groupBox_Dashboard;
         private TextBox textBox_Titlu;

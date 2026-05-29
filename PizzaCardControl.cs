@@ -29,5 +29,25 @@
         {
 
         }
+
+        private void lblPicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Numee_Produs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PizzaCardControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

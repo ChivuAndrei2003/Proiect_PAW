@@ -8,5 +8,10 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             //  picture_Pizza_Falling.Image = 
             //Proiect_PAW_Chivu_Evelyn_Andrei.Resources.Resource1.PIzza_Falling;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

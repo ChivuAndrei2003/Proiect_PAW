@@ -51,20 +51,19 @@
             toolStripButton4 = new ToolStripDropDownButton();
             serializeToolStripMenuItem = new ToolStripMenuItem();
             deserealizeToolStripMenuItem = new ToolStripMenuItem();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             textFileToolStripMenuItem = new ToolStripMenuItem();
             btnTextFile = new ToolStripMenuItem();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            dataGridViewPizzas = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).BeginInit();
             toolStrip1.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPizzas).BeginInit();
             SuspendLayout();
-            // 
-            // pizzaBindingSource
-            // 
-            pizzaBindingSource.DataSource = typeof(Entities.Pizza);
             // 
             // groupBox1
             // 
@@ -154,6 +153,7 @@
             button_Adauga_Imagine.TabIndex = 58;
             button_Adauga_Imagine.Text = "Adauga imagine";
             button_Adauga_Imagine.UseVisualStyleBackColor = true;
+            button_Adauga_Imagine.Click += btn_Adauga_Imagine_Custom_Click;
             // 
             // pb_Imagine_Custom
             // 
@@ -233,6 +233,7 @@
             toolStripButton3.Name = "toolStripButton3";
             toolStripButton3.Size = new Size(67, 22);
             toolStripButton3.Text = "Main Page";
+            toolStripButton3.Click += btn_Main_Page_Click;
             // 
             // toolStripButton1
             // 
@@ -264,24 +265,16 @@
             // serializeToolStripMenuItem
             // 
             serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
-            serializeToolStripMenuItem.Size = new Size(180, 22);
+            serializeToolStripMenuItem.Size = new Size(132, 22);
             serializeToolStripMenuItem.Text = "Serialize";
             serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
             // 
             // deserealizeToolStripMenuItem
             // 
             deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
-            deserealizeToolStripMenuItem.Size = new Size(180, 22);
+            deserealizeToolStripMenuItem.Size = new Size(132, 22);
             deserealizeToolStripMenuItem.Text = "Deserealize";
             deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Dock = DockStyle.Bottom;
-            flowLayoutPanel1.Location = new Point(0, 343);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1080, 337);
-            flowLayoutPanel1.TabIndex = 65;
             // 
             // textFileToolStripMenuItem
             // 
@@ -294,8 +287,30 @@
             // btnTextFile
             // 
             btnTextFile.Name = "btnTextFile";
-            btnTextFile.Size = new Size(180, 22);
+            btnTextFile.Size = new Size(107, 22);
             btnTextFile.Text = "Export";
+            btnTextFile.Click += btn_Text_File;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(dataGridViewPizzas);
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.Location = new Point(0, 343);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1080, 337);
+            flowLayoutPanel1.TabIndex = 65;
+            // 
+            // dataGridViewPizzas
+            // 
+            dataGridViewPizzas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewPizzas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPizzas.Location = new Point(3, 3);
+            dataGridViewPizzas.MultiSelect = false;
+            dataGridViewPizzas.Name = "dataGridViewPizzas";
+            dataGridViewPizzas.ReadOnly = true;
+            dataGridViewPizzas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewPizzas.Size = new Size(1077, 334);
+            dataGridViewPizzas.TabIndex = 0;
             // 
             // PizzaForm
             // 
@@ -316,6 +331,8 @@
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPizzas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -345,5 +362,6 @@
         private ToolStripMenuItem deserealizeToolStripMenuItem;
         private ToolStripMenuItem textFileToolStripMenuItem;
         private ToolStripMenuItem btnTextFile;
+        private DataGridView dataGridViewPizzas;
     }
 }

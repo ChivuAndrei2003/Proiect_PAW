@@ -42,10 +42,6 @@
             label1 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
@@ -54,11 +50,25 @@
             toolStripDropDownButton1 = new ToolStripDropDownButton();
             tOCSVToolStripMenuItem = new ToolStripMenuItem();
             errorProvider1 = new ErrorProvider(components);
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            comandaBindingSource = new BindingSource(components);
+            adressBindingSource = new BindingSource(components);
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            orasDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            stradaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            numarDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statusDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            clientDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)comandaBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)adressBindingSource).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -194,34 +204,19 @@
             // 
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, idDataGridViewTextBoxColumn, orasDataGridViewTextBoxColumn, stradaDataGridViewTextBoxColumn, numarDataGridViewTextBoxColumn, statusDataGridViewTextBoxColumn, clientDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = adressBindingSource;
             dataGridView1.Location = new Point(524, 28);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(561, 444);
             dataGridView1.TabIndex = 59;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Column2";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Column3";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Column4";
-            Column4.Name = "Column4";
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // toolStrip1
             // 
@@ -288,6 +283,84 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "oras";
+            Column1.HeaderText = "Oras";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "strada";
+            Column2.HeaderText = "Strada";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "numar";
+            Column3.HeaderText = "Numar";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            Column4.DataPropertyName = "status";
+            Column4.HeaderText = "Status";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            // 
+            // comandaBindingSource
+            // 
+            comandaBindingSource.DataSource = typeof(Entities.Comanda);
+            // 
+            // adressBindingSource
+            // 
+            adressBindingSource.DataSource = typeof(Entities.Adress);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            idDataGridViewTextBoxColumn.HeaderText = "id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orasDataGridViewTextBoxColumn
+            // 
+            orasDataGridViewTextBoxColumn.DataPropertyName = "oras";
+            orasDataGridViewTextBoxColumn.HeaderText = "oras";
+            orasDataGridViewTextBoxColumn.Name = "orasDataGridViewTextBoxColumn";
+            orasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stradaDataGridViewTextBoxColumn
+            // 
+            stradaDataGridViewTextBoxColumn.DataPropertyName = "strada";
+            stradaDataGridViewTextBoxColumn.HeaderText = "strada";
+            stradaDataGridViewTextBoxColumn.Name = "stradaDataGridViewTextBoxColumn";
+            stradaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numarDataGridViewTextBoxColumn
+            // 
+            numarDataGridViewTextBoxColumn.DataPropertyName = "numar";
+            numarDataGridViewTextBoxColumn.HeaderText = "numar";
+            numarDataGridViewTextBoxColumn.Name = "numarDataGridViewTextBoxColumn";
+            numarDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            statusDataGridViewTextBoxColumn.HeaderText = "status";
+            statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clientDataGridViewTextBoxColumn
+            // 
+            clientDataGridViewTextBoxColumn.DataPropertyName = "Client";
+            clientDataGridViewTextBoxColumn.HeaderText = "Client";
+            clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            clientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // AdressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -307,6 +380,8 @@
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)comandaBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)adressBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -331,11 +406,19 @@
         private ToolStripDropDownButton toolStripDropDownButton1;
         private ToolStripMenuItem tOCSVToolStripMenuItem;
         private Label label4;
+        private ComboBox comboBox1;
+        private ErrorProvider errorProvider1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
-        private ComboBox comboBox1;
-        private ErrorProvider errorProvider1;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn orasDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn stradaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn numarDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
+        private BindingSource adressBindingSource;
+        private BindingSource comandaBindingSource;
     }
 }

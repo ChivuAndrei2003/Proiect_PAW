@@ -9,12 +9,14 @@
             this.strada = strada;
             this.numar = numar;
             Client = client;
+            status = "";
         }
 
         public int id { get; set; }
         public string oras { get; set; }
         public string strada { get; set; }
         public string numar { get; set; }
+        public string status { get; set; }
 
         public Client Client { get; set; }
 

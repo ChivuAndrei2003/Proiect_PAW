@@ -5,6 +5,23 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         public MainForm()
         {
             InitializeComponent();
+
+            //
+
+        }
+
+
+
+        private void OpenForm(Form form)
+        {
+            Hide();
+            form.FormClosed += ChildForm_FormClosed;
+            form.Show();
+        }
+
+        private void ChildForm_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -16,29 +33,20 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         {
 
         }
-        private void btn_Pizza_Click(object sender, EventArgs e)
-        {
-            PizzaForm pizzaForm = new PizzaForm();
-            pizzaForm.ShowDialog();
 
-            this.Hide();
+        private void btn_Pizza_Click(object? sender, EventArgs e)
+        {
+            OpenForm(new PizzaForm());
         }
 
-        private void btn_Clients_Click(object sender, EventArgs e)
+        private void btn_Clients_Click(object? sender, EventArgs e)
         {
-            ClientsForm clientsForm = new ClientsForm();
-            clientsForm.ShowDialog();
-
-            this.Hide();
-
+            OpenForm(new ClientsForm());
         }
 
-        private void btn_Adresses_Click(object sender, EventArgs e)
+        private void btn_Adresses_Click(object? sender, EventArgs e)
         {
-            AdressForm adressForm = new AdressForm();
-            adressForm.ShowDialog();
-
-            this.Hide();
+            OpenForm(new AdressForm());
         }
     }
 }

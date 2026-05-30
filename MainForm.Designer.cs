@@ -31,6 +31,11 @@
             components = new System.ComponentModel.Container();
             errorProvider1 = new ErrorProvider(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            pizzaToolStripMenuItem = new ToolStripMenuItem();
+            clientsToolStripMenuItem = new ToolStripMenuItem();
+            adressToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
             tableLayoutPanel1 = new TableLayoutPanel();
             btn_Adresses = new Button();
             btn_Clients = new Button();
@@ -39,6 +44,7 @@
             groupBox_Dashboard = new GroupBox();
             textBox_Titlu = new TextBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox_Dashboard.SuspendLayout();
@@ -50,8 +56,42 @@
             // 
             // contextMenuStrip1
             // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, pizzaToolStripMenuItem, clientsToolStripMenuItem, adressToolStripMenuItem, toolStripMenuItem2 });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
+            contextMenuStrip1.Size = new Size(181, 136);
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(180, 22);
+            fileToolStripMenuItem.Text = "&File";
+            // 
+            // pizzaToolStripMenuItem
+            // 
+            pizzaToolStripMenuItem.Name = "pizzaToolStripMenuItem";
+            pizzaToolStripMenuItem.Size = new Size(180, 22);
+            pizzaToolStripMenuItem.Text = "&Pizza";
+            pizzaToolStripMenuItem.Click += btn_Pizza_Click;
+            // 
+            // clientsToolStripMenuItem
+            // 
+            clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            clientsToolStripMenuItem.Size = new Size(180, 22);
+            clientsToolStripMenuItem.Text = "&Clients";
+            clientsToolStripMenuItem.Click += btn_Clients_Click;
+            // 
+            // adressToolStripMenuItem
+            // 
+            adressToolStripMenuItem.Name = "adressToolStripMenuItem";
+            adressToolStripMenuItem.Size = new Size(180, 22);
+            adressToolStripMenuItem.Text = "&Adress";
+            adressToolStripMenuItem.Click += btn_Adresses_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(180, 22);
+            toolStripMenuItem2.Text = "&Exit";
             // 
             // tableLayoutPanel1
             // 
@@ -70,7 +110,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.3922729F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 34.1753349F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(200, 674);
+            tableLayoutPanel1.Size = new Size(200, 683);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // btn_Adresses
@@ -78,9 +118,9 @@
             btn_Adresses.BackColor = SystemColors.MenuBar;
             btn_Adresses.Dock = DockStyle.Fill;
             btn_Adresses.Font = new Font("Segoe UI", 30F);
-            btn_Adresses.Location = new Point(3, 451);
+            btn_Adresses.Location = new Point(3, 457);
             btn_Adresses.Name = "btn_Adresses";
-            btn_Adresses.Size = new Size(194, 220);
+            btn_Adresses.Size = new Size(194, 223);
             btn_Adresses.TabIndex = 2;
             btn_Adresses.Text = "Adresses";
             btn_Adresses.UseVisualStyleBackColor = false;
@@ -91,9 +131,9 @@
             btn_Clients.BackColor = SystemColors.Menu;
             btn_Clients.Dock = DockStyle.Left;
             btn_Clients.Font = new Font("Segoe UI", 30F);
-            btn_Clients.Location = new Point(3, 221);
+            btn_Clients.Location = new Point(3, 224);
             btn_Clients.Name = "btn_Clients";
-            btn_Clients.Size = new Size(194, 224);
+            btn_Clients.Size = new Size(194, 227);
             btn_Clients.TabIndex = 1;
             btn_Clients.Text = "Clients";
             btn_Clients.UseVisualStyleBackColor = false;
@@ -106,7 +146,7 @@
             btn_Pizza.Font = new Font("Segoe UI", 30F);
             btn_Pizza.Location = new Point(3, 3);
             btn_Pizza.Name = "btn_Pizza";
-            btn_Pizza.Size = new Size(194, 212);
+            btn_Pizza.Size = new Size(194, 215);
             btn_Pizza.TabIndex = 0;
             btn_Pizza.Text = "Pizza";
             btn_Pizza.UseVisualStyleBackColor = false;
@@ -163,6 +203,7 @@
             Text = "Form1";
             Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox_Dashboard.ResumeLayout(false);
@@ -182,5 +223,10 @@
         private PictureBox pictureBox1;
         private GroupBox groupBox_Dashboard;
         private TextBox textBox_Titlu;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem pizzaToolStripMenuItem;
+        private ToolStripMenuItem clientsToolStripMenuItem;
+        private ToolStripMenuItem adressToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem2;
     }
 }

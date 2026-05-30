@@ -86,7 +86,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Anchor = AnchorStyles.Left;
             groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox3);
@@ -96,11 +96,11 @@
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(0, 65);
+            groupBox1.Location = new Point(0, 28);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(1024, 330);
+            groupBox1.Size = new Size(430, 715);
             groupBox1.TabIndex = 56;
             groupBox1.TabStop = false;
             groupBox1.Text = "Adauga Clienti :";
@@ -119,9 +119,9 @@
             label3.Location = new Point(29, 126);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(98, 15);
+            label3.Size = new Size(87, 15);
             label3.TabIndex = 60;
-            label3.Text = "Total comanda  : ";
+            label3.Text = "Adresa livrare : ";
             // 
             // textBox3
             // 
@@ -136,9 +136,9 @@
             label2.Location = new Point(29, 80);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(83, 15);
+            label2.Size = new Size(62, 15);
             label2.TabIndex = 58;
-            label2.Text = "ID comanda  : ";
+            label2.Text = "ID client  : ";
             // 
             // textBox2
             // 
@@ -160,13 +160,18 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ActiveBorder;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(1031, 0);
+            dataGridView1.Location = new Point(427, 28);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(519, 774);
+            dataGridView1.ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(483, 746);
             dataGridView1.TabIndex = 55;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // contextMenuStrip1
             // 
@@ -178,7 +183,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2, toolStripButton4 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1550, 25);
+            toolStrip1.Size = new Size(910, 25);
             toolStrip1.TabIndex = 63;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -221,14 +226,14 @@
             // serializeToolStripMenuItem
             // 
             serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
-            serializeToolStripMenuItem.Size = new Size(180, 22);
+            serializeToolStripMenuItem.Size = new Size(132, 22);
             serializeToolStripMenuItem.Text = "Serialize";
             serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
             // 
             // deserealizeToolStripMenuItem
             // 
             deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
-            deserealizeToolStripMenuItem.Size = new Size(180, 22);
+            deserealizeToolStripMenuItem.Size = new Size(132, 22);
             deserealizeToolStripMenuItem.Text = "Deserealize";
             deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
             // 
@@ -236,7 +241,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1550, 774);
+            ClientSize = new Size(910, 774);
             Controls.Add(toolStrip1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);

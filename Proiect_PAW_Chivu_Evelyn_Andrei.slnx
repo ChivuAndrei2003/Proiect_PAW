@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="../Proiect_PAW_Chivu_Evelyn_Andrei.Controls/Proiect_PAW_Chivu_Evelyn_Andrei.Controls.csproj" Id="59bdc68d-5cb9-49ae-bf49-756514c48220" />
-  <Project Path="Proiect_PAW_Chivu_Evelyn_Andrei.csproj" />
+  <Project Path="Proiect_PAW_Chivu_Evelyn_Andrei.csproj">
+    <BuildDependency Project="../Proiect_PAW_Chivu_Evelyn_Andrei.Controls/Proiect_PAW_Chivu_Evelyn_Andrei.Controls.csproj" />
+  </Project>
 </Solution>

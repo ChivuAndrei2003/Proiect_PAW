@@ -6,11 +6,10 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         {
             InitializeComponent();
 
-            //
 
+            tableLayoutPanel1.ContextMenuStrip = ContextMenuStrip;
+            pictureBox1.ContextMenuStrip = ContextMenuStrip;
         }
-
-
 
         private void OpenForm(Form form)
         {
@@ -47,6 +46,31 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         private void btn_Adresses_Click(object? sender, EventArgs e)
         {
             OpenForm(new AdressForm());
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void groupBox_Dashboard_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Titlu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fileToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

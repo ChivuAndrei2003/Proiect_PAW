@@ -222,18 +222,19 @@
             toolStripButton4.Name = "toolStripButton4";
             toolStripButton4.Size = new Size(109, 22);
             toolStripButton4.Text = "Json Serialization";
+            toolStripButton4.Click += toolStripButton4_Click;
             // 
             // serializeToolStripMenuItem
             // 
             serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
-            serializeToolStripMenuItem.Size = new Size(132, 22);
+            serializeToolStripMenuItem.Size = new Size(180, 22);
             serializeToolStripMenuItem.Text = "Serialize";
             serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
             // 
             // deserealizeToolStripMenuItem
             // 
             deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
-            deserealizeToolStripMenuItem.Size = new Size(132, 22);
+            deserealizeToolStripMenuItem.Size = new Size(180, 22);
             deserealizeToolStripMenuItem.Text = "Deserealize";
             deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
             // 

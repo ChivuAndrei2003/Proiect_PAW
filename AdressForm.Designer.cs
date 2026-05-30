@@ -239,7 +239,7 @@
             toolStripButton3.Name = "toolStripButton3";
             toolStripButton3.Size = new Size(67, 22);
             toolStripButton3.Text = "Main Page";
-            toolStripButton3.Click += toolStripButton3_Click;
+            toolStripButton3.Click += btn_Main_Page_Click;
             // 
             // toolStripButton1
             // 

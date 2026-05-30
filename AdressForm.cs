@@ -71,11 +71,6 @@
 
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -95,6 +90,14 @@
             }
 
             MessageBox.Show("adresa este valida");
+        }
+
+        private void btn_Main_Page_Click(object sender, EventArgs e)
+        {
+            MainForm main_form = new MainForm();
+            main_form.ShowDialog();
+
+
         }
     }
 }

@@ -33,14 +33,14 @@
             button2 = new Button();
             btnAdd = new Button();
             groupBox1 = new GroupBox();
+            textBox4 = new TextBox();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            label2 = new Label();
             textBox2 = new TextBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            textBox3 = new TextBox();
-            label2 = new Label();
-            textBox4 = new TextBox();
-            label3 = new Label();
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
@@ -102,6 +102,40 @@
             groupBox1.Text = "Adauga Clienti :";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(141, 123);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(120, 23);
+            textBox4.TabIndex = 61;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(29, 126);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 15);
+            label3.TabIndex = 60;
+            label3.Text = "Total comanda  : ";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(141, 77);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(120, 23);
+            textBox3.TabIndex = 59;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(29, 80);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 15);
+            label2.TabIndex = 58;
+            label2.Text = "ID comanda  : ";
+            // 
             // textBox2
             // 
             textBox2.Location = new Point(141, 36);
@@ -135,40 +169,6 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(141, 77);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(120, 23);
-            textBox3.TabIndex = 59;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(29, 80);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 15);
-            label2.TabIndex = 58;
-            label2.Text = "ID comanda  : ";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(141, 123);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(120, 23);
-            textBox4.TabIndex = 61;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(29, 126);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(98, 15);
-            label3.TabIndex = 60;
-            label3.Text = "Total comanda  : ";
-            // 
             // toolStrip1
             // 
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2 });
@@ -185,6 +185,7 @@
             toolStripButton3.Name = "toolStripButton3";
             toolStripButton3.Size = new Size(67, 22);
             toolStripButton3.Text = "Main Page";
+            toolStripButton3.Click += btn_Main_Page_Click;
             // 
             // toolStripButton1
             // 

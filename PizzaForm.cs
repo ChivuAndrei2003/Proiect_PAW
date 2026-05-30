@@ -297,6 +297,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 _customImagePath = openFileDialog.FileName;
+                comboBox1.Text = "Custom";
                 pb_Imagine_Custom.Image = Image.FromFile(_customImagePath);
             }
         }

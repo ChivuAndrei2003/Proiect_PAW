@@ -20,16 +20,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             _pizzas = new BindingList<Pizza>();
             _customImagePath = "";
 
-            ConfigureCardsPanel();
-        }
 
-        private void ConfigureCardsPanel()
-        {
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.WrapContents = true;
-            flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
-            flowLayoutPanel1.Padding = new Padding(10);
         }
 
         private void AddPizzaCard(Pizza pizza)

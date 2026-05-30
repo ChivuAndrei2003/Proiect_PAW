@@ -290,8 +290,10 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Location = new Point(0, 300);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(10);
             flowLayoutPanel1.Size = new Size(1099, 434);
             flowLayoutPanel1.TabIndex = 65;
             // 

@@ -117,6 +117,7 @@
             button3.TabIndex = 54;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += btn_Delete_Click;
             // 
             // btnAdd
             // 
@@ -146,6 +147,7 @@
             button2.TabIndex = 53;
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += btn_Update_Click;
             // 
             // label3
             // 
@@ -317,6 +319,7 @@
             Controls.Add(dataGridView1);
             Name = "AdressForm";
             Text = "AdressesForm";
+            Load += AdressForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

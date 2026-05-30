@@ -183,5 +183,10 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         {
 
         }
+
+        private void AdressForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -63,6 +63,7 @@
             button3.TabIndex = 54;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += btn_Delete_Click;
             // 
             // button2
             // 
@@ -73,6 +74,7 @@
             button2.TabIndex = 53;
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += btn_Update_Click;
             // 
             // btnAdd
             // 
@@ -83,6 +85,7 @@
             btnAdd.TabIndex = 52;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // groupBox1
             // 

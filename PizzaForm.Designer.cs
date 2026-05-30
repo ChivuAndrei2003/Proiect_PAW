@@ -46,8 +46,6 @@
             label4 = new Label();
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
             toolStripButton4 = new ToolStripDropDownButton();
             serializeToolStripMenuItem = new ToolStripMenuItem();
             deserealizeToolStripMenuItem = new ToolStripMenuItem();
@@ -215,7 +213,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2, toolStripButton4, textFileToolStripMenuItem });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton4, textFileToolStripMenuItem });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1099, 25);
@@ -231,23 +229,6 @@
             toolStripButton3.Text = "Main Page";
             toolStripButton3.Click += btn_Main_Page_Click;
             // 
-            // toolStripButton1
-            // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(36, 22);
-            toolStripButton1.Text = "Print";
-            // 
-            // toolStripButton2
-            // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(80, 22);
-            toolStripButton2.Text = "Preview Print";
-            toolStripButton2.ToolTipText = "Print Preview";
-            // 
             // toolStripButton4
             // 
             toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -261,14 +242,14 @@
             // serializeToolStripMenuItem
             // 
             serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
-            serializeToolStripMenuItem.Size = new Size(132, 22);
+            serializeToolStripMenuItem.Size = new Size(180, 22);
             serializeToolStripMenuItem.Text = "Serialize";
             serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
             // 
             // deserealizeToolStripMenuItem
             // 
             deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
-            deserealizeToolStripMenuItem.Size = new Size(132, 22);
+            deserealizeToolStripMenuItem.Size = new Size(180, 22);
             deserealizeToolStripMenuItem.Text = "Deserealize";
             deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
             // 
@@ -283,7 +264,7 @@
             // btnTextFile
             // 
             btnTextFile.Name = "btnTextFile";
-            btnTextFile.Size = new Size(107, 22);
+            btnTextFile.Size = new Size(180, 22);
             btnTextFile.Text = "Export";
             btnTextFile.Click += btn_Text_File;
             // 
@@ -337,8 +318,6 @@
         private Label label3;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
         private FlowLayoutPanel flowLayoutPanel1;
         private ToolStripDropDownButton toolStripButton4;
         private ToolStripMenuItem serializeToolStripMenuItem;

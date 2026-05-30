@@ -101,6 +101,7 @@
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ContextMenuStrip = ContextMenuStrip;
             tableLayoutPanel1.Controls.Add(btn_Adresses, 0, 2);
             tableLayoutPanel1.Controls.Add(btn_Clients, 0, 1);
             tableLayoutPanel1.Controls.Add(btn_Pizza, 0, 0);
@@ -111,7 +112,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.3922729F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 34.1753349F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(200, 701);
+            tableLayoutPanel1.Size = new Size(200, 704);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // btn_Adresses
@@ -119,9 +120,9 @@
             btn_Adresses.BackColor = SystemColors.MenuBar;
             btn_Adresses.Dock = DockStyle.Fill;
             btn_Adresses.Font = new Font("Segoe UI", 30F);
-            btn_Adresses.Location = new Point(3, 469);
+            btn_Adresses.Location = new Point(3, 471);
             btn_Adresses.Name = "btn_Adresses";
-            btn_Adresses.Size = new Size(194, 229);
+            btn_Adresses.Size = new Size(194, 230);
             btn_Adresses.TabIndex = 2;
             btn_Adresses.Text = "Adresses";
             btn_Adresses.UseVisualStyleBackColor = false;
@@ -132,9 +133,9 @@
             btn_Clients.BackColor = SystemColors.Menu;
             btn_Clients.Dock = DockStyle.Left;
             btn_Clients.Font = new Font("Segoe UI", 30F);
-            btn_Clients.Location = new Point(3, 230);
+            btn_Clients.Location = new Point(3, 231);
             btn_Clients.Name = "btn_Clients";
-            btn_Clients.Size = new Size(194, 233);
+            btn_Clients.Size = new Size(194, 234);
             btn_Clients.TabIndex = 1;
             btn_Clients.Text = "Clients";
             btn_Clients.UseVisualStyleBackColor = false;
@@ -147,7 +148,7 @@
             btn_Pizza.Font = new Font("Segoe UI", 30F);
             btn_Pizza.Location = new Point(3, 3);
             btn_Pizza.Name = "btn_Pizza";
-            btn_Pizza.Size = new Size(194, 221);
+            btn_Pizza.Size = new Size(194, 222);
             btn_Pizza.TabIndex = 0;
             btn_Pizza.Text = "Pizza";
             btn_Pizza.UseVisualStyleBackColor = false;
@@ -156,6 +157,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.ContextMenuStrip = ContextMenuStrip;
             pictureBox1.Image = Resources.Resource1.PIzza_Falling;
             pictureBox1.Location = new Point(203, 52);
             pictureBox1.Name = "pictureBox1";
@@ -218,28 +220,28 @@
             // pizzaToolStripMenuItem1
             // 
             pizzaToolStripMenuItem1.Name = "pizzaToolStripMenuItem1";
-            pizzaToolStripMenuItem1.Size = new Size(180, 22);
+            pizzaToolStripMenuItem1.Size = new Size(120, 22);
             pizzaToolStripMenuItem1.Text = "&Pizza";
             pizzaToolStripMenuItem1.Click += btn_Pizza_Click;
             // 
             // clientsToolStripMenuItem1
             // 
             clientsToolStripMenuItem1.Name = "clientsToolStripMenuItem1";
-            clientsToolStripMenuItem1.Size = new Size(180, 22);
+            clientsToolStripMenuItem1.Size = new Size(120, 22);
             clientsToolStripMenuItem1.Text = "&Clients";
             clientsToolStripMenuItem1.Click += btn_Clients_Click;
             // 
             // adressesToolStripMenuItem
             // 
             adressesToolStripMenuItem.Name = "adressesToolStripMenuItem";
-            adressesToolStripMenuItem.Size = new Size(180, 22);
+            adressesToolStripMenuItem.Size = new Size(120, 22);
             adressesToolStripMenuItem.Text = "&Adresses";
             adressesToolStripMenuItem.Click += btn_Adresses_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(120, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 

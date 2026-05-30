@@ -211,7 +211,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
 
             if (string.IsNullOrWhiteSpace(numePizza))
             {
-                MessageBox.Show("Alege o pizza");
+                MessageBox.Show("Alege o pizza  ");
                 return;
             }
 
@@ -320,7 +320,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                 }
             }
         }
-
+        /// /
         private void btn_Main_Page_Click(object? sender, EventArgs e)
         {
             Close();

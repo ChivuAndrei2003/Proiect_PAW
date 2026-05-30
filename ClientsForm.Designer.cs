@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsForm));
             button3 = new Button();
             button2 = new Button();
             btnAdd = new Button();
@@ -44,11 +43,6 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
-            btn_print_Click = new ToolStripButton();
-            btn_preview_print_Click = new ToolStripButton();
-            toolStripButton4 = new ToolStripDropDownButton();
-            serializeToolStripMenuItem = new ToolStripMenuItem();
-            deserealizeToolStripMenuItem = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             toolStrip1.SuspendLayout();
@@ -183,7 +177,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, btn_preview_print_Click, toolStripButton4 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1155, 25);
@@ -198,48 +192,6 @@
             toolStripButton3.Size = new Size(67, 22);
             toolStripButton3.Text = "Main Page";
             toolStripButton3.Click += btn_Main_Page_Click;
-            // 
-            // btn_print_Click
-            // 
-            btn_print_Click.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btn_print_Click.ImageTransparentColor = Color.Magenta;
-            btn_print_Click.Name = "btn_print_Click";
-            btn_print_Click.Size = new Size(36, 22);
-            btn_print_Click.Text = "Print";
-            // 
-            // btn_preview_print_Click
-            // 
-            btn_preview_print_Click.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btn_preview_print_Click.ImageTransparentColor = Color.Magenta;
-            btn_preview_print_Click.Name = "btn_preview_print_Click";
-            btn_preview_print_Click.Size = new Size(80, 22);
-            btn_preview_print_Click.Text = "Preview Print";
-            btn_preview_print_Click.ToolTipText = "Print Preview";
-            // 
-            // toolStripButton4
-            // 
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton4.DropDownItems.AddRange(new ToolStripItem[] { serializeToolStripMenuItem, deserealizeToolStripMenuItem });
-            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(109, 22);
-            toolStripButton4.Text = "Json Serialization";
-            toolStripButton4.Click += toolStripButton4_Click;
-            // 
-            // serializeToolStripMenuItem
-            // 
-            serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
-            serializeToolStripMenuItem.Size = new Size(132, 22);
-            serializeToolStripMenuItem.Text = "Serialize";
-            serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
-            // 
-            // deserealizeToolStripMenuItem
-            // 
-            deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
-            deserealizeToolStripMenuItem.Size = new Size(132, 22);
-            deserealizeToolStripMenuItem.Text = "Deserealize";
-            deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
             // 
             // ClientsForm
             // 
@@ -276,10 +228,5 @@
         private Label label2;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton3;
-        private ToolStripButton btn_print_Click;
-        private ToolStripButton btn_preview_print_Click;
-        private ToolStripDropDownButton toolStripButton4;
-        private ToolStripMenuItem serializeToolStripMenuItem;
-        private ToolStripMenuItem deserealizeToolStripMenuItem;
     }
 }

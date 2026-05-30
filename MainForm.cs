@@ -6,9 +6,6 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         {
             InitializeComponent();
 
-
-            tableLayoutPanel1.ContextMenuStrip = ContextMenuStrip;
-            pictureBox1.ContextMenuStrip = ContextMenuStrip;
         }
 
         private void OpenForm(Form form)

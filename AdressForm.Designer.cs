@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdressForm));
             groupBox1 = new GroupBox();
             comboBox1 = new ComboBox();
             label4 = new Label();
@@ -51,11 +52,17 @@
             toolStripButton3 = new ToolStripButton();
             btn_print_Click = new ToolStripButton();
             toolStripButton2 = new ToolStripButton();
+            toolStripButtonCopySelected = new ToolStripButton();
             statusStrip1 = new StatusStrip();
             toolStripDropDownButton1 = new ToolStripDropDownButton();
             tOCSVToolStripMenuItem = new ToolStripMenuItem();
+            toolStripStatusLabelCount = new ToolStripStatusLabel();
+            toolStripStatusLabelSelected = new ToolStripStatusLabel();
             errorProvider1 = new ErrorProvider(components);
             comandaBindingSource = new BindingSource(components);
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printDialog1 = new PrintDialog();
+            printPreviewDialog1 = new PrintPreviewDialog();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)adressBindingSource).BeginInit();
@@ -244,7 +251,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, toolStripButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, toolStripButton2, toolStripButtonCopySelected });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1270, 25);
@@ -267,6 +274,7 @@
             btn_print_Click.Name = "btn_print_Click";
             btn_print_Click.Size = new Size(36, 22);
             btn_print_Click.Text = "Print";
+            btn_print_Click.Click += btn_print_Click_Click;
             // 
             // toolStripButton2
             // 
@@ -278,9 +286,18 @@
             toolStripButton2.ToolTipText = "Print Preview";
             toolStripButton2.Click += btn_preview_print_Click;
             // 
+            // toolStripButtonCopySelected
+            // 
+            toolStripButtonCopySelected.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButtonCopySelected.ImageTransparentColor = Color.Magenta;
+            toolStripButtonCopySelected.Name = "toolStripButtonCopySelected";
+            toolStripButtonCopySelected.Size = new Size(86, 22);
+            toolStripButtonCopySelected.Text = "Copy Selected";
+            toolStripButtonCopySelected.Click += btn_CopySelected_Click;
+            // 
             // statusStrip1
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripStatusLabelCount, toolStripStatusLabelSelected });
             statusStrip1.Location = new Point(0, 695);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(1270, 22);
@@ -303,10 +320,46 @@
             tOCSVToolStripMenuItem.Name = "tOCSVToolStripMenuItem";
             tOCSVToolStripMenuItem.Size = new Size(113, 22);
             tOCSVToolStripMenuItem.Text = "TO CSV";
+            tOCSVToolStripMenuItem.Click += tOCSVToolStripMenuItem_Click;
+            // 
+            // toolStripStatusLabelCount
+            // 
+            toolStripStatusLabelCount.Name = "toolStripStatusLabelCount";
+            toolStripStatusLabelCount.Size = new Size(55, 17);
+            toolStripStatusLabelCount.Text = "Adrese: 0";
+            // 
+            // toolStripStatusLabelSelected
+            // 
+            toolStripStatusLabelSelected.Name = "toolStripStatusLabelSelected";
+            toolStripStatusLabelSelected.Size = new Size(1147, 17);
+            toolStripStatusLabelSelected.Spring = true;
+            toolStripStatusLabelSelected.Text = "Nicio adresa selectata";
+            toolStripStatusLabelSelected.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
+            // 
+            // printDocument1
+            // 
+            printDocument1.BeginPrint += printDocument_BeginPrint;
+            printDocument1.PrintPage += printDocument_PrintPage;
+            // 
+            // printDialog1
+            // 
+            printDialog1.Document = printDocument1;
+            printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
             // 
             // AdressForm
             // 
@@ -350,9 +403,12 @@
         private Button button2;
         private ToolStripButton btn_print_Click;
         private ToolStripButton toolStripButton2;
+        private ToolStripButton toolStripButtonCopySelected;
         private StatusStrip statusStrip1;
         private ToolStripDropDownButton toolStripDropDownButton1;
         private ToolStripMenuItem tOCSVToolStripMenuItem;
+        private ToolStripStatusLabel toolStripStatusLabelCount;
+        private ToolStripStatusLabel toolStripStatusLabelSelected;
         private Label label4;
         private ComboBox comboBox1;
         private ErrorProvider errorProvider1;
@@ -360,13 +416,10 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn orasDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn stradaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn numarDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
         private BindingSource adressBindingSource;
         private BindingSource comandaBindingSource;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintDialog printDialog1;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -31,7 +31,10 @@
             components = new System.ComponentModel.Container();
             pizzaBindingSource = new BindingSource(components);
             groupBox1 = new GroupBox();
+            btn_Delete = new Button();
             textBox_Cantitate = new NumericUpDown();
+            btn_Update = new Button();
+            btn_Add = new Button();
             label3 = new Label();
             button_Adauga_Imagine = new Button();
             pb_Imagine_Custom = new PictureBox();
@@ -40,9 +43,6 @@
             label1 = new Label();
             label2 = new Label();
             label4 = new Label();
-            btn_Add = new Button();
-            btn_Delete = new Button();
-            btn_Update = new Button();
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
@@ -84,12 +84,51 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Adauga pizza in stock :";
             // 
+            // btn_Delete
+            // 
+            btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_Delete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btn_Delete.Location = new Point(278, 197);
+            btn_Delete.Margin = new Padding(0);
+            btn_Delete.Name = "btn_Delete";
+            btn_Delete.Size = new Size(78, 44);
+            btn_Delete.TabIndex = 54;
+            btn_Delete.Text = "Delete";
+            btn_Delete.UseVisualStyleBackColor = true;
+            btn_Delete.Click += btn_Delete_Click;
+            // 
             // textBox_Cantitate
             // 
             textBox_Cantitate.Location = new Point(141, 124);
             textBox_Cantitate.Name = "textBox_Cantitate";
             textBox_Cantitate.Size = new Size(179, 23);
             textBox_Cantitate.TabIndex = 60;
+            // 
+            // btn_Update
+            // 
+            btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btn_Update.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btn_Update.Location = new Point(159, 197);
+            btn_Update.Margin = new Padding(0);
+            btn_Update.Name = "btn_Update";
+            btn_Update.Size = new Size(85, 44);
+            btn_Update.TabIndex = 53;
+            btn_Update.Text = "Update";
+            btn_Update.UseVisualStyleBackColor = true;
+            btn_Update.Click += btn_Update_Click;
+            // 
+            // btn_Add
+            // 
+            btn_Add.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_Add.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btn_Add.Location = new Point(45, 197);
+            btn_Add.Margin = new Padding(4, 3, 4, 3);
+            btn_Add.Name = "btn_Add";
+            btn_Add.Size = new Size(78, 44);
+            btn_Add.TabIndex = 52;
+            btn_Add.Text = "Add";
+            btn_Add.UseVisualStyleBackColor = true;
+            btn_Add.Click += btn_Add_Click;
             // 
             // label3
             // 
@@ -133,7 +172,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "\"country\"", "\"All Cheese\"", "\"romaneasca\"", "\"cu ton\"", "\"mediteraneana\"", "\"rustica\"", "\"texas\"", "\"custom\"" });
+            comboBox1.Items.AddRange(new object[] { "Country", "All Cheese", "Romaneasca", "Cu ton", "Mediteraneana", "Rustica", "Texas", "Custom" });
             comboBox1.Location = new Point(141, 37);
             comboBox1.MaxLength = 15;
             comboBox1.Name = "comboBox1";
@@ -171,45 +210,6 @@
             label4.Size = new Size(101, 15);
             label4.TabIndex = 6;
             label4.Text = "Imagine Custom :";
-            // 
-            // btn_Add
-            // 
-            btn_Add.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            btn_Add.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Add.Location = new Point(45, 197);
-            btn_Add.Margin = new Padding(4, 3, 4, 3);
-            btn_Add.Name = "btn_Add";
-            btn_Add.Size = new Size(78, 44);
-            btn_Add.TabIndex = 52;
-            btn_Add.Text = "Add";
-            btn_Add.UseVisualStyleBackColor = true;
-            btn_Add.Click += btn_Add_Click;
-            // 
-            // btn_Delete
-            // 
-            btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Delete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Delete.Location = new Point(278, 197);
-            btn_Delete.Margin = new Padding(0);
-            btn_Delete.Name = "btn_Delete";
-            btn_Delete.Size = new Size(78, 44);
-            btn_Delete.TabIndex = 54;
-            btn_Delete.Text = "Delete";
-            btn_Delete.UseVisualStyleBackColor = true;
-            btn_Delete.Click += btn_Delete_Click;
-            // 
-            // btn_Update
-            // 
-            btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btn_Update.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Update.Location = new Point(159, 197);
-            btn_Update.Margin = new Padding(0);
-            btn_Update.Name = "btn_Update";
-            btn_Update.Size = new Size(85, 44);
-            btn_Update.TabIndex = 53;
-            btn_Update.Text = "Update";
-            btn_Update.UseVisualStyleBackColor = true;
-            btn_Update.Click += btn_Update_Click;
             // 
             // toolStrip1
             // 

@@ -42,33 +42,33 @@
             label1 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            toolStrip1 = new ToolStrip();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            statusStrip1 = new StatusStrip();
-            toolStripDropDownButton1 = new ToolStripDropDownButton();
-            tOCSVToolStripMenuItem = new ToolStripMenuItem();
-            errorProvider1 = new ErrorProvider(components);
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
-            comandaBindingSource = new BindingSource(components);
-            adressBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             orasDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             stradaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             numarDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             statusDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             clientDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            adressBindingSource = new BindingSource(components);
+            toolStrip1 = new ToolStrip();
+            toolStripButton3 = new ToolStripButton();
+            btn_print_Click = new ToolStripButton();
+            toolStripButton2 = new ToolStripButton();
+            statusStrip1 = new StatusStrip();
+            toolStripDropDownButton1 = new ToolStripDropDownButton();
+            tOCSVToolStripMenuItem = new ToolStripMenuItem();
+            errorProvider1 = new ErrorProvider(components);
+            comandaBindingSource = new BindingSource(components);
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)adressBindingSource).BeginInit();
             toolStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)comandaBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)adressBindingSource).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -218,71 +218,6 @@
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
-            // toolStrip1
-            // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1085, 25);
-            toolStrip1.TabIndex = 62;
-            toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton3
-            // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(67, 22);
-            toolStripButton3.Text = "Main Page";
-            toolStripButton3.Click += btn_Main_Page_Click;
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(36, 22);
-            toolStripButton1.Text = "Print";
-            // 
-            // toolStripButton2
-            // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(80, 22);
-            toolStripButton2.Text = "Preview Print";
-            toolStripButton2.ToolTipText = "Print Preview";
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1 });
-            statusStrip1.Location = new Point(0, 475);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1085, 22);
-            statusStrip1.TabIndex = 63;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { tOCSVToolStripMenuItem });
-            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
-            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            toolStripDropDownButton1.Size = new Size(53, 20);
-            toolStripDropDownButton1.Text = "Export";
-            // 
-            // tOCSVToolStripMenuItem
-            // 
-            tOCSVToolStripMenuItem.Checked = true;
-            tOCSVToolStripMenuItem.CheckState = CheckState.Checked;
-            tOCSVToolStripMenuItem.Name = "tOCSVToolStripMenuItem";
-            tOCSVToolStripMenuItem.Size = new Size(113, 22);
-            tOCSVToolStripMenuItem.Text = "TO CSV";
-            // 
-            // errorProvider1
-            // 
-            errorProvider1.ContainerControl = this;
-            // 
             // Column1
             // 
             Column1.DataPropertyName = "oras";
@@ -310,14 +245,6 @@
             Column4.HeaderText = "Status";
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
-            // 
-            // comandaBindingSource
-            // 
-            comandaBindingSource.DataSource = typeof(Entities.Comanda);
-            // 
-            // adressBindingSource
-            // 
-            adressBindingSource.DataSource = typeof(Entities.Adress);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -361,6 +288,80 @@
             clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
             clientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // adressBindingSource
+            // 
+            adressBindingSource.DataSource = typeof(Entities.Adress);
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, toolStripButton2 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(1085, 25);
+            toolStrip1.TabIndex = 62;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton3
+            // 
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.ImageTransparentColor = Color.Magenta;
+            toolStripButton3.Name = "toolStripButton3";
+            toolStripButton3.Size = new Size(67, 22);
+            toolStripButton3.Text = "Main Page";
+            toolStripButton3.Click += btn_Main_Page_Click;
+            // 
+            // btn_print_Click
+            // 
+            btn_print_Click.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btn_print_Click.ImageTransparentColor = Color.Magenta;
+            btn_print_Click.Name = "btn_print_Click";
+            btn_print_Click.Size = new Size(36, 22);
+            btn_print_Click.Text = "Print";
+            // 
+            // toolStripButton2
+            // 
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(80, 22);
+            toolStripButton2.Text = "Preview Print";
+            toolStripButton2.ToolTipText = "Print Preview";
+            toolStripButton2.Click += btn_preview_print_Click;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1 });
+            statusStrip1.Location = new Point(0, 475);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(1085, 22);
+            statusStrip1.TabIndex = 63;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { tOCSVToolStripMenuItem });
+            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.Size = new Size(53, 20);
+            toolStripDropDownButton1.Text = "Export";
+            // 
+            // tOCSVToolStripMenuItem
+            // 
+            tOCSVToolStripMenuItem.Checked = true;
+            tOCSVToolStripMenuItem.CheckState = CheckState.Checked;
+            tOCSVToolStripMenuItem.Name = "tOCSVToolStripMenuItem";
+            tOCSVToolStripMenuItem.Size = new Size(113, 22);
+            tOCSVToolStripMenuItem.Text = "TO CSV";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // comandaBindingSource
+            // 
+            comandaBindingSource.DataSource = typeof(Entities.Comanda);
+            // 
             // AdressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -375,13 +376,13 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)adressBindingSource).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ((System.ComponentModel.ISupportInitialize)comandaBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)adressBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -400,7 +401,7 @@
         private Button button3;
         private Button btnAdd;
         private Button button2;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton btn_print_Click;
         private ToolStripButton toolStripButton2;
         private StatusStrip statusStrip1;
         private ToolStripDropDownButton toolStripDropDownButton1;

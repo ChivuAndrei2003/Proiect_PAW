@@ -8,7 +8,8 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
     {
         #region Attributes
         private BindingList<Pizza> _pizzas;
-        private DataGridView _dgvPizzas;
+        private Pizza? _selectedPizza;
+        private PizzaCardControl? _selectedPizzaCard;
         private string _customImagePath;
         #endregion
 
@@ -17,18 +18,58 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             InitializeComponent();
 
             _pizzas = new BindingList<Pizza>();
-            _dgvPizzas = new DataGridView();
             _customImagePath = "";
 
-            InitializeGrid();
-
+            ConfigureCardsPanel();
         }
 
-        private void InitializeGrid()
+        private void ConfigureCardsPanel()
         {
-            dataGridViewPizzas.AutoGenerateColumns = true;
-            pizzaBindingSource.DataSource = _pizzas;
-            dataGridViewPizzas.DataSource = pizzaBindingSource;
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.WrapContents = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanel1.Padding = new Padding(10);
+        }
+
+        private void AddPizzaCard(Pizza pizza)
+        {
+            PizzaCardControl card = new PizzaCardControl();
+            card.Margin = new Padding(10);
+            card.Tag = pizza;
+            card.BorderStyle = BorderStyle.FixedSingle;
+
+            card.SetPizza(pizza.nume, pizza.pret, pizza.imagePath);
+            AttachSelectHandler(card, (sender, e) => SelectPizza(pizza, card));
+
+            flowLayoutPanel1.Controls.Add(card);
+            SelectPizza(pizza, card);
+        }
+
+        private void AttachSelectHandler(Control control, EventHandler handler)
+        {
+            control.Click += handler;
+
+            foreach (Control child in control.Controls)
+            {
+                AttachSelectHandler(child, handler);
+            }
+        }
+
+        private void SelectPizza(Pizza pizza, PizzaCardControl card)
+        {
+            if (_selectedPizzaCard != null)
+            {
+                _selectedPizzaCard.BackColor = SystemColors.Control;
+            }
+
+            _selectedPizza = pizza;
+            _selectedPizzaCard = card;
+            _selectedPizzaCard.BackColor = Color.LightYellow;
+
+            comboBox1.Text = pizza.nume;
+            textBox_Pret.Value = pizza.pret;
+            textBox_Cantitate.Value = pizza.cantitate;
         }
 
         private string getPizzaImagePath(string pizzaName)
@@ -85,12 +126,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
 
         private Pizza? GetSelectedPizza()
         {
-            if (_dgvPizzas.SelectedRows.Count == 0)
-            {
-                return null;
-            }
-
-            return _dgvPizzas.SelectedRows[0].DataBoundItem as Pizza;
+            return _selectedPizza;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -144,7 +180,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             pizza.cantitate = (int)textBox_Cantitate.Value;
             pizza.imagePath = getPizzaImagePath(comboBox1.Text);
 
-            pizzaBindingSource.ResetBindings(false);
+            _selectedPizzaCard?.SetPizza(pizza.nume, pizza.pret, pizza.imagePath);
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -168,7 +204,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                 );
 
             _pizzas.Add(pizza);
-            MessageBox.Show("Pizza a fost adaugata in lista.");
+            AddPizzaCard(pizza);
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -185,6 +221,14 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                 DialogResult.Yes)
             {
                 _pizzas.Remove(pizza);
+                if (_selectedPizzaCard != null)
+                {
+                    flowLayoutPanel1.Controls.Remove(_selectedPizzaCard);
+                    _selectedPizzaCard.Dispose();
+                }
+
+                _selectedPizza = null;
+                _selectedPizzaCard = null;
             }
         }
 
@@ -204,10 +248,14 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                 if (deserializedPizzas != null)
                 {
                     _pizzas.Clear();
+                    flowLayoutPanel1.Controls.Clear();
+                    _selectedPizza = null;
+                    _selectedPizzaCard = null;
 
                     foreach (Pizza pizza in deserializedPizzas)
                     {
                         _pizzas.Add(pizza);
+                        AddPizzaCard(pizza);
                     }
                 }
             }
@@ -234,20 +282,6 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                     }
                 }
             }
-        }
-
-        private void dataGridViewPizzas_SelectionChanged(object? sender, EventArgs e)
-        {
-            Pizza? pizza = GetSelectedPizza();
-
-            if (pizza == null)
-            {
-                return;
-            }
-
-            comboBox1.Text = pizza.nume;
-            textBox_Pret.Value = pizza.pret;
-            textBox_Cantitate.Value = pizza.cantitate;
         }
 
         private void btn_Main_Page_Click(object? sender, EventArgs e)

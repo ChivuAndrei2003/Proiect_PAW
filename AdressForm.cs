@@ -178,5 +178,10 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             textBox_Numar.Text = address.numar;
             comboBox1.Text = address.status;
         }
+
+        private void btn_preview_print_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,15 +54,12 @@
             textFileToolStripMenuItem = new ToolStripMenuItem();
             btnTextFile = new ToolStripMenuItem();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            dataGridViewPizzas = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb_Imagine_Custom).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).BeginInit();
             toolStrip1.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPizzas).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -293,24 +290,11 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(dataGridViewPizzas);
             flowLayoutPanel1.Dock = DockStyle.Bottom;
             flowLayoutPanel1.Location = new Point(0, 343);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1080, 337);
             flowLayoutPanel1.TabIndex = 65;
-            // 
-            // dataGridViewPizzas
-            // 
-            dataGridViewPizzas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewPizzas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPizzas.Location = new Point(3, 3);
-            dataGridViewPizzas.MultiSelect = false;
-            dataGridViewPizzas.Name = "dataGridViewPizzas";
-            dataGridViewPizzas.ReadOnly = true;
-            dataGridViewPizzas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewPizzas.Size = new Size(1077, 334);
-            dataGridViewPizzas.TabIndex = 0;
             // 
             // PizzaForm
             // 
@@ -331,8 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)textBox_Pret).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPizzas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -362,6 +344,5 @@
         private ToolStripMenuItem deserealizeToolStripMenuItem;
         private ToolStripMenuItem textFileToolStripMenuItem;
         private ToolStripMenuItem btnTextFile;
-        private DataGridView dataGridViewPizzas;
     }
 }

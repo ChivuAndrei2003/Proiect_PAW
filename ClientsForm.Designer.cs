@@ -44,8 +44,8 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
+            btn_print_Click = new ToolStripButton();
+            btn_preview_print_Click = new ToolStripButton();
             toolStripButton4 = new ToolStripDropDownButton();
             serializeToolStripMenuItem = new ToolStripMenuItem();
             deserealizeToolStripMenuItem = new ToolStripMenuItem();
@@ -180,7 +180,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2, toolStripButton4 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, btn_preview_print_Click, toolStripButton4 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(910, 25);
@@ -196,22 +196,22 @@
             toolStripButton3.Text = "Main Page";
             toolStripButton3.Click += btn_Main_Page_Click;
             // 
-            // toolStripButton1
+            // btn_print_Click
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(36, 22);
-            toolStripButton1.Text = "Print";
+            btn_print_Click.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btn_print_Click.ImageTransparentColor = Color.Magenta;
+            btn_print_Click.Name = "btn_print_Click";
+            btn_print_Click.Size = new Size(36, 22);
+            btn_print_Click.Text = "Print";
             // 
-            // toolStripButton2
+            // btn_preview_print_Click
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(80, 22);
-            toolStripButton2.Text = "Preview Print";
-            toolStripButton2.ToolTipText = "Print Preview";
+            btn_preview_print_Click.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btn_preview_print_Click.ImageTransparentColor = Color.Magenta;
+            btn_preview_print_Click.Name = "btn_preview_print_Click";
+            btn_preview_print_Click.Size = new Size(80, 22);
+            btn_preview_print_Click.Text = "Preview Print";
+            btn_preview_print_Click.ToolTipText = "Print Preview";
             // 
             // toolStripButton4
             // 
@@ -273,8 +273,8 @@
         private Label label2;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
+        private ToolStripButton btn_print_Click;
+        private ToolStripButton btn_preview_print_Click;
         private ToolStripDropDownButton toolStripButton4;
         private ToolStripMenuItem serializeToolStripMenuItem;
         private ToolStripMenuItem deserealizeToolStripMenuItem;

@@ -1,4 +1,6 @@
-﻿namespace Proiect_PAW_Chivu_Evelyn_Andrei
+﻿using Proiect_PAW_Chivu_Evelyn_Andrei.Entities;
+
+namespace Proiect_PAW_Chivu_Evelyn_Andrei
 {
     public partial class PizzaForm : Form
     {
@@ -6,6 +8,8 @@
         {
             InitializeComponent();
         }
+        private readonly List<Pizza> pizzas = new();
+
         private string getPizzaImagePath(string pizzaName)
         {
             string pizza = pizzaName.Trim().ToLower();
@@ -98,11 +102,26 @@
             decimal pret = textBox_Pret.Value;
             decimal cantitate = textBox_Cantitate.Value;
 
+            int cantitate_to_int = (int)cantitate;
+
             //TO DO : ADAUGA LABEL DE CANTITATE IN PIZZA CARD
-            if (numePizza != null)
+            if (string.IsNullOrEmpty(numePizza))
             {
-                string pizzaPath = getPizzaImagePath(numePizza);
+                MessageBox.Show("Alege o pizza");
+                return;
+                // string pizzaPath = getPizzaImagePath(numePizza);
             }
+
+            Pizza pizza = new Pizza(
+                pizzas.Count + 1,
+                numePizza,
+                pret,
+                getPizzaImagePath(numePizza),
+                cantitate_to_int
+                );
+
+            pizzas.Add(pizza);
+            MessageBox.Show("Pizza a fost adaugata in lista.");
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)

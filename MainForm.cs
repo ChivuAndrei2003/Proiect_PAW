@@ -16,7 +16,6 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         {
 
         }
-
         private void btn_Pizza_Click(object sender, EventArgs e)
         {
             PizzaForm pizzaForm = new PizzaForm();

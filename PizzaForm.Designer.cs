@@ -77,23 +77,22 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label4);
-            groupBox1.Location = new Point(0, 71);
+            groupBox1.Location = new Point(0, 28);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(1080, 276);
+            groupBox1.Size = new Size(1099, 276);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Adauga pizza in stock :";
             // 
             // btn_Delete
             // 
-            btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            btn_Delete.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Delete.Location = new Point(278, 197);
+            btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_Delete.Location = new Point(270, 197);
             btn_Delete.Margin = new Padding(0);
             btn_Delete.Name = "btn_Delete";
-            btn_Delete.Size = new Size(78, 44);
+            btn_Delete.Size = new Size(83, 44);
             btn_Delete.TabIndex = 54;
             btn_Delete.Text = "Delete";
             btn_Delete.UseVisualStyleBackColor = true;
@@ -108,12 +107,11 @@
             // 
             // btn_Update
             // 
-            btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btn_Update.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btn_Update.Location = new Point(159, 197);
+            btn_Update.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_Update.Location = new Point(155, 197);
             btn_Update.Margin = new Padding(0);
             btn_Update.Name = "btn_Update";
-            btn_Update.Size = new Size(85, 44);
+            btn_Update.Size = new Size(90, 44);
             btn_Update.TabIndex = 53;
             btn_Update.Text = "Update";
             btn_Update.UseVisualStyleBackColor = true;
@@ -122,11 +120,10 @@
             // btn_Add
             // 
             btn_Add.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            btn_Add.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btn_Add.Location = new Point(45, 197);
             btn_Add.Margin = new Padding(4, 3, 4, 3);
             btn_Add.Name = "btn_Add";
-            btn_Add.Size = new Size(78, 44);
+            btn_Add.Size = new Size(83, 44);
             btn_Add.TabIndex = 52;
             btn_Add.Text = "Add";
             btn_Add.UseVisualStyleBackColor = true;
@@ -144,7 +141,8 @@
             // 
             // button_Adauga_Imagine
             // 
-            button_Adauga_Imagine.Location = new Point(695, 243);
+            button_Adauga_Imagine.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            button_Adauga_Imagine.Location = new Point(646, 243);
             button_Adauga_Imagine.Name = "button_Adauga_Imagine";
             button_Adauga_Imagine.Size = new Size(75, 23);
             button_Adauga_Imagine.TabIndex = 58;
@@ -154,13 +152,13 @@
             // 
             // pb_Imagine_Custom
             // 
-            pb_Imagine_Custom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pb_Imagine_Custom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             pb_Imagine_Custom.BackColor = SystemColors.ControlDark;
             pb_Imagine_Custom.BorderStyle = BorderStyle.Fixed3D;
-            pb_Imagine_Custom.Location = new Point(620, 77);
+            pb_Imagine_Custom.Location = new Point(583, 77);
             pb_Imagine_Custom.Margin = new Padding(4, 3, 4, 3);
             pb_Imagine_Custom.Name = "pb_Imagine_Custom";
-            pb_Imagine_Custom.Size = new Size(212, 164);
+            pb_Imagine_Custom.Size = new Size(209, 164);
             pb_Imagine_Custom.SizeMode = PictureBoxSizeMode.StretchImage;
             pb_Imagine_Custom.TabIndex = 57;
             pb_Imagine_Custom.TabStop = false;
@@ -206,8 +204,9 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(679, 39);
+            label4.Location = new Point(646, 45);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(101, 15);
@@ -219,7 +218,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2, toolStripButton4, textFileToolStripMenuItem });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1080, 25);
+            toolStrip1.Size = new Size(1099, 25);
             toolStrip1.TabIndex = 64;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -290,17 +289,17 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Dock = DockStyle.Bottom;
-            flowLayoutPanel1.Location = new Point(0, 343);
+            flowLayoutPanel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.Location = new Point(0, 300);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1080, 337);
+            flowLayoutPanel1.Size = new Size(1099, 434);
             flowLayoutPanel1.TabIndex = 65;
             // 
             // PizzaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1080, 680);
+            ClientSize = new Size(1099, 731);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(toolStrip1);
             Controls.Add(groupBox1);

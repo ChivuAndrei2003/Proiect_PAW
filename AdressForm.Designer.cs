@@ -46,12 +46,6 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            orasDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            stradaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            numarDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            statusDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            clientDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             adressBindingSource = new BindingSource(components);
             toolStrip1 = new ToolStrip();
             toolStripButton3 = new ToolStripButton();
@@ -89,7 +83,7 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(517, 198);
+            groupBox1.Size = new Size(463, 204);
             groupBox1.TabIndex = 60;
             groupBox1.TabStop = false;
             groupBox1.Text = "Adauga adresele la care livrezi comenzile :";
@@ -116,7 +110,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(427, 122);
+            button3.Location = new Point(341, 129);
             button3.Margin = new Padding(4, 3, 4, 3);
             button3.Name = "button3";
             button3.Size = new Size(82, 30);
@@ -126,7 +120,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(427, 32);
+            btnAdd.Location = new Point(341, 39);
             btnAdd.Margin = new Padding(4, 3, 4, 3);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(82, 30);
@@ -145,7 +139,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(427, 82);
+            button2.Location = new Point(341, 89);
             button2.Margin = new Padding(4, 3, 4, 3);
             button2.Name = "button2";
             button2.Size = new Size(82, 30);
@@ -203,17 +197,17 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, idDataGridViewTextBoxColumn, orasDataGridViewTextBoxColumn, stradaDataGridViewTextBoxColumn, numarDataGridViewTextBoxColumn, statusDataGridViewTextBoxColumn, clientDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
             dataGridView1.DataSource = adressBindingSource;
-            dataGridView1.Location = new Point(524, 28);
+            dataGridView1.Location = new Point(470, 28);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(561, 444);
+            dataGridView1.Size = new Size(800, 664);
             dataGridView1.TabIndex = 59;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
@@ -246,58 +240,12 @@
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            idDataGridViewTextBoxColumn.HeaderText = "id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // orasDataGridViewTextBoxColumn
-            // 
-            orasDataGridViewTextBoxColumn.DataPropertyName = "oras";
-            orasDataGridViewTextBoxColumn.HeaderText = "oras";
-            orasDataGridViewTextBoxColumn.Name = "orasDataGridViewTextBoxColumn";
-            orasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stradaDataGridViewTextBoxColumn
-            // 
-            stradaDataGridViewTextBoxColumn.DataPropertyName = "strada";
-            stradaDataGridViewTextBoxColumn.HeaderText = "strada";
-            stradaDataGridViewTextBoxColumn.Name = "stradaDataGridViewTextBoxColumn";
-            stradaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numarDataGridViewTextBoxColumn
-            // 
-            numarDataGridViewTextBoxColumn.DataPropertyName = "numar";
-            numarDataGridViewTextBoxColumn.HeaderText = "numar";
-            numarDataGridViewTextBoxColumn.Name = "numarDataGridViewTextBoxColumn";
-            numarDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            statusDataGridViewTextBoxColumn.HeaderText = "status";
-            statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clientDataGridViewTextBoxColumn
-            // 
-            clientDataGridViewTextBoxColumn.DataPropertyName = "Client";
-            clientDataGridViewTextBoxColumn.HeaderText = "Client";
-            clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
-            clientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adressBindingSource
-            // 
-            adressBindingSource.DataSource = typeof(Entities.Adress);
-            // 
             // toolStrip1
             // 
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, toolStripButton2 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1085, 25);
+            toolStrip1.Size = new Size(1270, 25);
             toolStrip1.TabIndex = 62;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -331,9 +279,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1 });
-            statusStrip1.Location = new Point(0, 475);
+            statusStrip1.Location = new Point(0, 695);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1085, 22);
+            statusStrip1.Size = new Size(1270, 22);
             statusStrip1.TabIndex = 63;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -358,15 +306,11 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
-            // comandaBindingSource
-            // 
-            comandaBindingSource.DataSource = typeof(Entities.Comanda);
-            // 
             // AdressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1085, 497);
+            ClientSize = new Size(1270, 717);
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
             Controls.Add(groupBox1);

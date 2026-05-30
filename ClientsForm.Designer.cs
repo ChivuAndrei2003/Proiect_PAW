@@ -86,7 +86,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.Anchor = AnchorStyles.Left;
             groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox3);
@@ -160,6 +159,7 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ActiveBorder;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -168,7 +168,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(483, 746);
+            dataGridView1.Size = new Size(728, 746);
             dataGridView1.TabIndex = 55;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
@@ -183,7 +183,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, btn_print_Click, btn_preview_print_Click, toolStripButton4 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(910, 25);
+            toolStrip1.Size = new Size(1155, 25);
             toolStrip1.TabIndex = 63;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -227,14 +227,14 @@
             // serializeToolStripMenuItem
             // 
             serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
-            serializeToolStripMenuItem.Size = new Size(180, 22);
+            serializeToolStripMenuItem.Size = new Size(132, 22);
             serializeToolStripMenuItem.Text = "Serialize";
             serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
             // 
             // deserealizeToolStripMenuItem
             // 
             deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
-            deserealizeToolStripMenuItem.Size = new Size(180, 22);
+            deserealizeToolStripMenuItem.Size = new Size(132, 22);
             deserealizeToolStripMenuItem.Text = "Deserealize";
             deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
             // 
@@ -242,7 +242,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(910, 774);
+            ClientSize = new Size(1155, 774);
             Controls.Add(toolStrip1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);

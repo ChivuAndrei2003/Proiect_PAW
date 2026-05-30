@@ -111,7 +111,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.3922729F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 34.1753349F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(200, 698);
+            tableLayoutPanel1.Size = new Size(200, 701);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // btn_Adresses
@@ -119,9 +119,9 @@
             btn_Adresses.BackColor = SystemColors.MenuBar;
             btn_Adresses.Dock = DockStyle.Fill;
             btn_Adresses.Font = new Font("Segoe UI", 30F);
-            btn_Adresses.Location = new Point(3, 467);
+            btn_Adresses.Location = new Point(3, 469);
             btn_Adresses.Name = "btn_Adresses";
-            btn_Adresses.Size = new Size(194, 228);
+            btn_Adresses.Size = new Size(194, 229);
             btn_Adresses.TabIndex = 2;
             btn_Adresses.Text = "Adresses";
             btn_Adresses.UseVisualStyleBackColor = false;
@@ -132,9 +132,9 @@
             btn_Clients.BackColor = SystemColors.Menu;
             btn_Clients.Dock = DockStyle.Left;
             btn_Clients.Font = new Font("Segoe UI", 30F);
-            btn_Clients.Location = new Point(3, 229);
+            btn_Clients.Location = new Point(3, 230);
             btn_Clients.Name = "btn_Clients";
-            btn_Clients.Size = new Size(194, 232);
+            btn_Clients.Size = new Size(194, 233);
             btn_Clients.TabIndex = 1;
             btn_Clients.Text = "Clients";
             btn_Clients.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             btn_Pizza.Font = new Font("Segoe UI", 30F);
             btn_Pizza.Location = new Point(3, 3);
             btn_Pizza.Name = "btn_Pizza";
-            btn_Pizza.Size = new Size(194, 220);
+            btn_Pizza.Size = new Size(194, 221);
             btn_Pizza.TabIndex = 0;
             btn_Pizza.Text = "Pizza";
             btn_Pizza.UseVisualStyleBackColor = false;
@@ -155,11 +155,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Resources.Resource1.PIzza_Falling;
             pictureBox1.Location = new Point(203, 52);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(718, 689);
+            pictureBox1.Size = new Size(995, 676);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -176,20 +176,21 @@
             groupBox_Dashboard.ForeColor = Color.FromArgb(192, 0, 192);
             groupBox_Dashboard.Location = new Point(0, 1);
             groupBox_Dashboard.Name = "groupBox_Dashboard";
-            groupBox_Dashboard.Size = new Size(921, 45);
+            groupBox_Dashboard.Size = new Size(1198, 45);
             groupBox_Dashboard.TabIndex = 5;
             groupBox_Dashboard.TabStop = false;
             groupBox_Dashboard.Enter += groupBox_Dashboard_Enter;
             // 
             // textBox_Titlu
             // 
+            textBox_Titlu.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox_Titlu.BackColor = SystemColors.Control;
             textBox_Titlu.BorderStyle = BorderStyle.None;
             textBox_Titlu.Font = new Font("Segoe UI", 16F);
             textBox_Titlu.ForeColor = Color.Red;
             textBox_Titlu.Location = new Point(320, 0);
             textBox_Titlu.Name = "textBox_Titlu";
-            textBox_Titlu.Size = new Size(297, 29);
+            textBox_Titlu.Size = new Size(516, 29);
             textBox_Titlu.TabIndex = 0;
             textBox_Titlu.Text = "DASHBOARD";
             textBox_Titlu.TextAlign = HorizontalAlignment.Center;
@@ -202,7 +203,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(165, 24);
+            menuStrip1.Size = new Size(45, 24);
             menuStrip1.TabIndex = 6;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -246,7 +247,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(921, 754);
+            ClientSize = new Size(1198, 732);
             Controls.Add(pictureBox1);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(groupBox_Dashboard);

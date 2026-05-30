@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PizzaForm));
             pizzaBindingSource = new BindingSource(components);
             groupBox1 = new GroupBox();
             btn_Delete = new Button();
@@ -47,7 +48,12 @@
             toolStripButton3 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
             toolStripButton2 = new ToolStripButton();
+            toolStripButton4 = new ToolStripDropDownButton();
+            serializeToolStripMenuItem = new ToolStripMenuItem();
+            deserealizeToolStripMenuItem = new ToolStripMenuItem();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            textFileToolStripMenuItem = new ToolStripMenuItem();
+            btnTextFile = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pizzaBindingSource).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)textBox_Cantitate).BeginInit();
@@ -213,7 +219,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2, toolStripButton4, textFileToolStripMenuItem });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1080, 25);
@@ -245,6 +251,30 @@
             toolStripButton2.Text = "Preview Print";
             toolStripButton2.ToolTipText = "Print Preview";
             // 
+            // toolStripButton4
+            // 
+            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton4.DropDownItems.AddRange(new ToolStripItem[] { serializeToolStripMenuItem, deserealizeToolStripMenuItem });
+            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
+            toolStripButton4.ImageTransparentColor = Color.Magenta;
+            toolStripButton4.Name = "toolStripButton4";
+            toolStripButton4.Size = new Size(109, 22);
+            toolStripButton4.Text = "Json Serialization";
+            // 
+            // serializeToolStripMenuItem
+            // 
+            serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
+            serializeToolStripMenuItem.Size = new Size(180, 22);
+            serializeToolStripMenuItem.Text = "Serialize";
+            serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
+            // 
+            // deserealizeToolStripMenuItem
+            // 
+            deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
+            deserealizeToolStripMenuItem.Size = new Size(180, 22);
+            deserealizeToolStripMenuItem.Text = "Deserealize";
+            deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
+            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Dock = DockStyle.Bottom;
@@ -252,6 +282,20 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1080, 337);
             flowLayoutPanel1.TabIndex = 65;
+            // 
+            // textFileToolStripMenuItem
+            // 
+            textFileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { btnTextFile });
+            textFileToolStripMenuItem.Name = "textFileToolStripMenuItem";
+            textFileToolStripMenuItem.Size = new Size(58, 25);
+            textFileToolStripMenuItem.Text = "TextFile";
+            textFileToolStripMenuItem.Click += btn_Text_File;
+            // 
+            // btnTextFile
+            // 
+            btnTextFile.Name = "btnTextFile";
+            btnTextFile.Size = new Size(180, 22);
+            btnTextFile.Text = "Export";
             // 
             // PizzaForm
             // 
@@ -296,5 +340,10 @@
         private ToolStripButton toolStripButton1;
         private ToolStripButton toolStripButton2;
         private FlowLayoutPanel flowLayoutPanel1;
+        private ToolStripDropDownButton toolStripButton4;
+        private ToolStripMenuItem serializeToolStripMenuItem;
+        private ToolStripMenuItem deserealizeToolStripMenuItem;
+        private ToolStripMenuItem textFileToolStripMenuItem;
+        private ToolStripMenuItem btnTextFile;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsForm));
             button3 = new Button();
             button2 = new Button();
             btnAdd = new Button();
@@ -45,6 +46,9 @@
             toolStripButton3 = new ToolStripButton();
             toolStripButton1 = new ToolStripButton();
             toolStripButton2 = new ToolStripButton();
+            toolStripButton4 = new ToolStripDropDownButton();
+            serializeToolStripMenuItem = new ToolStripMenuItem();
+            deserealizeToolStripMenuItem = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             toolStrip1.SuspendLayout();
@@ -171,7 +175,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton1, toolStripButton2, toolStripButton4 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1550, 25);
@@ -203,6 +207,30 @@
             toolStripButton2.Size = new Size(80, 22);
             toolStripButton2.Text = "Preview Print";
             toolStripButton2.ToolTipText = "Print Preview";
+            // 
+            // toolStripButton4
+            // 
+            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton4.DropDownItems.AddRange(new ToolStripItem[] { serializeToolStripMenuItem, deserealizeToolStripMenuItem });
+            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
+            toolStripButton4.ImageTransparentColor = Color.Magenta;
+            toolStripButton4.Name = "toolStripButton4";
+            toolStripButton4.Size = new Size(109, 22);
+            toolStripButton4.Text = "Json Serialization";
+            // 
+            // serializeToolStripMenuItem
+            // 
+            serializeToolStripMenuItem.Name = "serializeToolStripMenuItem";
+            serializeToolStripMenuItem.Size = new Size(180, 22);
+            serializeToolStripMenuItem.Text = "Serialize";
+            serializeToolStripMenuItem.Click += btn_Json_Serialize_Click;
+            // 
+            // deserealizeToolStripMenuItem
+            // 
+            deserealizeToolStripMenuItem.Name = "deserealizeToolStripMenuItem";
+            deserealizeToolStripMenuItem.Size = new Size(180, 22);
+            deserealizeToolStripMenuItem.Text = "Deserealize";
+            deserealizeToolStripMenuItem.Click += btn_Json_Deserealize_Click;
             // 
             // ClientsForm
             // 
@@ -241,5 +269,8 @@
         private ToolStripButton toolStripButton3;
         private ToolStripButton toolStripButton1;
         private ToolStripButton toolStripButton2;
+        private ToolStripDropDownButton toolStripButton4;
+        private ToolStripMenuItem serializeToolStripMenuItem;
+        private ToolStripMenuItem deserealizeToolStripMenuItem;
     }
 }

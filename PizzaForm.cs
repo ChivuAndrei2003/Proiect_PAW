@@ -1,14 +1,22 @@
 ﻿using Proiect_PAW_Chivu_Evelyn_Andrei.Entities;
+using System.Text.Json;
 
 namespace Proiect_PAW_Chivu_Evelyn_Andrei
 {
     public partial class PizzaForm : Form
     {
+        #region Attributes
+        private List<Pizza> _pizzas;
+        #endregion
+
         public PizzaForm()
         {
             InitializeComponent();
+
+            pizzas = new List<Pizza>();
         }
-        private readonly List<Pizza> pizzas = new();
+
+        private List<Pizza> pizzas = new();
 
         private string getPizzaImagePath(string pizzaName)
         {
@@ -127,6 +135,53 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
         private void btn_Delete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Json_Serialize_Click(object sender, EventArgs e)
+        {
+
+            using (FileStream stream = File.Create("SerializedJSON.json"))
+            {
+                JsonSerializer.Serialize(stream, pizzas);
+            }
+
+        }
+
+        private void btn_Json_Deserealize_Click(object sender, EventArgs e)
+        {
+            using (FileStream stream = File.OpenRead("SerializedJSON.json"))
+            {
+                var deserializedParticipants = JsonSerializer.Deserialize<List<Pizza>>(stream);
+                if (deserializedParticipants != null)
+                    pizzas = deserializedParticipants;
+
+                // DisplayParticipants();
+            }
+        }
+
+        private void btn_Text_File(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text File | *.txt";
+            saveFileDialog.Title = "Save as text file";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+
+                using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                {
+                    sw.WriteLine("LastName,FirstName,BirthDate");
+
+                    foreach (var p in _pizzas)
+                    {
+                        sw.WriteLine("\"{0}\", \"{1}\", \"{2}\""
+                            , p.nume.Replace("\"", "\"\"")
+                            , p.cantitate.ToString()
+                            , p.pret.ToString();
+                    }
+                }
+            }
         }
     }
 }

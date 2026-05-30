@@ -1,4 +1,6 @@
-﻿namespace Proiect_PAW_Chivu_Evelyn_Andrei
+﻿//using SerializationJSONXMLTextFile.Entities;
+
+namespace Proiect_PAW_Chivu_Evelyn_Andrei
 {
     public partial class ClientsForm : Form
     {
@@ -28,6 +30,16 @@
             main_form.ShowDialog();
 
 
+
+        }
+
+        private void btn_Json_Serialize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Json_Deserealize_Click(object sender, EventArgs e)
+        {
 
         }
     }

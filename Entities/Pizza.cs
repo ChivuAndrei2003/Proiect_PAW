@@ -1,5 +1,6 @@
 ﻿namespace Proiect_PAW_Chivu_Evelyn_Andrei.Entities
 {
+    [Serializable]
     public class Pizza : IEquatable<Pizza?>
     {
         public Pizza(int id, string nume, decimal pret, string imagine, int cantitate)

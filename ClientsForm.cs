@@ -17,7 +17,24 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
 
 
             dataGridView1.DataSource = _clients;
+            LoadClientsFromDatabase();
+        }
 
+        private void LoadClientsFromDatabase()
+        {
+            try
+            {
+                _clients.Clear();
+
+                foreach (Client client in DatabaseService.LoadClients())
+                {
+                    _clients.Add(client);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private Client? GetSelectedClient()
@@ -68,14 +85,18 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                 return;
             }
 
-            int id;
-            if (!int.TryParse(textBox3.Text, out id))
-            {
-                id = _clients.Count + 1;
-            }
+            Client client = new Client(0, textBox2.Text, textBox4.Text, new List<Comanda>());
 
-            Client client = new Client(id, textBox2.Text, textBox4.Text, new List<Comanda>());
-            _clients.Add(client);
+            try
+            {
+                DatabaseService.AddClient(client);
+                _clients.Add(client);
+                textBox3.Text = client.Id.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Update_Click(object? sender, EventArgs e)
@@ -97,7 +118,15 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             client.numeClient = textBox2.Text;
             client.adresaLivrare = textBox4.Text;
 
-            dataGridView1.Refresh();
+            try
+            {
+                DatabaseService.UpdateClient(client);
+                dataGridView1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Delete_Click(object? sender, EventArgs e)
@@ -113,7 +142,15 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             if (MessageBox.Show("Stergi clientul selectat?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
                 DialogResult.Yes)
             {
-                _clients.Remove(client);
+                try
+                {
+                    DatabaseService.DeleteClient(client);
+                    _clients.Remove(client);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

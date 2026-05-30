@@ -11,7 +11,16 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+
+            try
+            {
+                DatabaseService.InitializeDatabase();
+                Application.Run(new MainForm());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

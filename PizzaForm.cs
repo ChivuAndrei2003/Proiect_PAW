@@ -20,7 +20,7 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             _pizzas = new BindingList<Pizza>();
             _customImagePath = "";
 
-
+            LoadPizzasFromDatabase();
         }
 
         private void AddPizzaCard(Pizza pizza)
@@ -35,6 +35,27 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
 
             flowLayoutPanel1.Controls.Add(card);
             SelectPizza(pizza, card);
+        }
+
+        private void LoadPizzasFromDatabase()
+        {
+            try
+            {
+                _pizzas.Clear();
+                flowLayoutPanel1.Controls.Clear();
+                _selectedPizza = null;
+                _selectedPizzaCard = null;
+
+                foreach (Pizza pizza in DatabaseService.LoadPizzas())
+                {
+                    _pizzas.Add(pizza);
+                    AddPizzaCard(pizza);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AttachSelectHandler(Control control, EventHandler handler)
@@ -171,7 +192,15 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             pizza.cantitate = (int)textBox_Cantitate.Value;
             pizza.imagePath = getPizzaImagePath(comboBox1.Text);
 
-            _selectedPizzaCard?.SetPizza(pizza.nume, pizza.pret, pizza.imagePath);
+            try
+            {
+                DatabaseService.UpdatePizza(pizza);
+                _selectedPizzaCard?.SetPizza(pizza.nume, pizza.pret, pizza.imagePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -194,8 +223,16 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
                 cantitate
                 );
 
-            _pizzas.Add(pizza);
-            AddPizzaCard(pizza);
+            try
+            {
+                DatabaseService.AddPizza(pizza);
+                _pizzas.Add(pizza);
+                AddPizzaCard(pizza);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -211,15 +248,24 @@ namespace Proiect_PAW_Chivu_Evelyn_Andrei
             if (MessageBox.Show("Stergi pizza selectata?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
                 DialogResult.Yes)
             {
-                _pizzas.Remove(pizza);
-                if (_selectedPizzaCard != null)
+                try
                 {
-                    flowLayoutPanel1.Controls.Remove(_selectedPizzaCard);
-                    _selectedPizzaCard.Dispose();
-                }
+                    DatabaseService.DeletePizza(pizza);
+                    _pizzas.Remove(pizza);
 
-                _selectedPizza = null;
-                _selectedPizzaCard = null;
+                    if (_selectedPizzaCard != null)
+                    {
+                        flowLayoutPanel1.Controls.Remove(_selectedPizzaCard);
+                        _selectedPizzaCard.Dispose();
+                    }
+
+                    _selectedPizza = null;
+                    _selectedPizzaCard = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
